@@ -1,4 +1,10 @@
-# XVR — Fase 1
+# XVR — Prototipo web
+
+Estado actual: **Fase 2** implementada sobre la base de Fase 1. Incluye `/soluciones`, el template de detalle y `/soluciones/marcado-laser`, además de Blog reservado, Header sticky y hover/focus de cards. Ver [documentación y validación de Fase 2](docs/PHASE-2.md).
+
+La documentación siguiente describe la base original de Fase 1; las rutas y cambios de Fase 2 se detallan en el documento enlazado.
+
+## Base de Fase 1
 
 Home en React + JavaScript, Vite, React Router y CSS tradicional. Proyecto inicializado directamente en XVR. No contiene backend, formularios, APIs, login ni las páginas de fases posteriores.
 
