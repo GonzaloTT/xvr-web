@@ -1,0 +1,145 @@
+/* New pages only: keep Home layout and its section styling unchanged. */
+.solutions-page .solutions-hero,
+.solution-detail-page .solution-detail-hero {
+  min-height: 440px;
+  padding-block: 64px 68px;
+}
+.solutions-hero .hero-copy { max-width: 800px; }
+.solutions-hero h1 { max-width: 760px; }
+.solution-detail-hero .hero-copy { max-width: 760px; }
+.solution-detail-hero h1 { max-width: 720px; }
+.solution-index { background: var(--surface-blue); }
+.solution-index > .container {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+}
+.solution-index a {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  min-height: 48px;
+  padding-block: 10px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .3px;
+}
+.solution-index a > span { color: var(--blue); }
+.portfolio-section { padding-block: 40px; background: var(--surface); }
+.portfolio-list { display: grid; gap: 40px; }
+.portfolio-solution {
+  display: grid;
+  grid-template-columns: 5fr 7fr;
+  background: var(--white);
+  border-radius: var(--radius);
+}
+.portfolio-image { position: relative; min-height: 530px; }
+.portfolio-image img { width: 100%; height: 100%; position: absolute; inset: 0; object-fit: cover; }
+.portfolio-image > span {
+  position: absolute;
+  left: 16px;
+  top: 16px;
+  padding: 5px 10px;
+  background: var(--navy);
+  color: var(--white);
+  font-size: 11px;
+}
+.portfolio-content { padding: 40px; align-self: center; min-width: 0; }
+.portfolio-content .eyebrow { font-size: 10px; letter-spacing: .5px; }
+.portfolio-content h2 { font-size: 36px; }
+.portfolio-content > p { margin-top: 16px; font-size: 15px; }
+.portfolio-features-label { font-size: 11px; letter-spacing: .3px; margin: 24px 0 10px; }
+.portfolio-features { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; margin-bottom: 14px; }
+.portfolio-feature { padding: 12px; background: var(--surface-blue); }
+.portfolio-feature .icon { color: var(--blue); width: 20px; height: 20px; }
+.portfolio-feature h4 { margin: 4px 0 6px; font-size: 14px; line-height: 1.3; }
+.portfolio-feature p { font-size: 13px; line-height: 1.4; }
+.portfolio-cta { background: var(--navy); padding: 40px var(--gutter); }
+.portfolio-cta .cta-section { background: var(--white); color: var(--ink); max-width: var(--max-width); margin-inline: auto; border-radius: var(--radius); }
+.portfolio-cta .cta-section .eyebrow { color: var(--blue); }
+.portfolio-cta .cta-section p { color: var(--text); }
+.portfolio-cta .cta-section .button { background: var(--navy); }
+.portfolio-cta .cta-section .button:hover { background: var(--blue-hover); }
+.detail-breadcrumb { background: var(--surface-blue); }
+.detail-breadcrumb > .container { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; min-height: 32px; padding-block: 7px; font-size: 10px; text-transform: uppercase; }
+.detail-breadcrumb a { color: var(--text); }
+.detail-breadcrumb a:hover { color: var(--blue); }
+.detail-highlights { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; margin-top: 24px; }
+.detail-highlights > div { display: flex; align-items: center; gap: 10px; padding: 14px; background: rgb(29 57 78 / 90%); }
+.detail-highlights .icon { width: 20px; height: 20px; color: var(--sky); }
+.detail-highlights strong { display: block; font-size: 12px; text-transform: uppercase; }
+.detail-highlights span { display: block; margin-top: 3px; color: var(--muted-light); font-size: 11px; }
+.detail-section { padding-block: 44px; }
+.detail-section h2 { max-width: 690px; }
+.detail-section .section-intro { max-width: 750px; font-size: 14px; margin-bottom: 36px; }
+.detail-tinted { background: var(--surface-blue); }
+.detail-grid-three { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--grid-gap); }
+.process-card { padding: 24px; background: var(--white); }
+.process-card-meta { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 8px; margin-bottom: 14px; font-size: 10px; color: var(--blue); }
+.process-card-meta > span:last-child { padding: 3px 6px; background: var(--surface-blue); color: var(--text); font-size: 9px; }
+.process-card p, .detail-card-body p, .detail-benefit p, .detail-industry p, .ecosystem-card > p { font-size: 14px; line-height: 1.5; margin-top: 8px; }
+.process-card .process-note { padding: 10px; background: var(--surface); font-size: 11px; margin-top: 16px; }
+.detail-image-card { background: var(--white); border: 1px solid var(--border); }
+.detail-card-image { position: relative; }
+.detail-card-image img { width: 100%; height: auto; aspect-ratio: 1.6; object-fit: cover; }
+.detail-card-image > span { position: absolute; top: 8px; left: 8px; right: 8px; width: fit-content; max-width: calc(100% - 16px); padding: 6px; background: var(--navy); color: var(--white); font-size: 9px; }
+.detail-card-body { padding: 16px; }
+.detail-section .grid-four { align-items: stretch; }
+.detail-benefit { display: flex; gap: 16px; padding: 24px; background: var(--white); }
+.detail-benefit .icon-tile { flex-shrink: 0; }
+.detail-benefit h3 { font-size: 17px; }
+.detail-industries-grid { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 16px; }
+.detail-industry { padding: 18px 16px; background: var(--surface-blue); }
+.detail-industry .icon { color: var(--blue); width: 20px; height: 20px; }
+.detail-industry h3 { font-size: 16px; }
+.detail-industry p { font-size: 13px; }
+.ecosystem-heading { display: flex; align-items: end; justify-content: space-between; gap: 32px; }
+.ecosystem-heading .text-link { margin-bottom: 36px; }
+.ecosystem-card { padding: 22px; }
+.ecosystem-card > img { width: 100%; height: auto; aspect-ratio: 1.9; object-fit: cover; margin-bottom: 20px; }
+.ecosystem-card .process-card-meta { font-size: 9px; }
+.detail-cta { padding-block: 40px; }
+.detail-cta .cta-section { border-radius: 6px; box-shadow: var(--card-hover-shadow); }
+.detail-cta .cta-inner > div:first-child { max-width: 700px; }
+@media (max-width: 1100px) {
+  .portfolio-content { padding: 28px; }
+  .portfolio-content h2 { font-size: 30px; }
+  .portfolio-solution { grid-template-columns: 2fr 3fr; }
+  .portfolio-image { min-height: 540px; }
+  .portfolio-features { grid-template-columns: 1fr; }
+  .portfolio-feature { display: grid; grid-template-columns: 22px 1fr; gap: 3px 8px; }
+  .portfolio-feature h4 { margin: 0; }
+  .portfolio-feature p { grid-column: 2; }
+  .detail-grid-three { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .detail-industries-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .ecosystem-heading { display: block; }
+  .ecosystem-heading .text-link { display: inline-block; margin-top: -12px; margin-bottom: 24px; }
+  .detail-benefit { padding: 20px; gap: 12px; }
+}
+@media (max-width: 700px) {
+  .solutions-page .solutions-hero, .solution-detail-page .solution-detail-hero { padding-block: 40px 64px; min-height: 0; }
+  .solution-index > .container { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 12px; }
+  .solution-index a { font-size: 9px; }
+  .portfolio-section { padding-block: 24px; }
+  .portfolio-list { gap: 24px; }
+  .portfolio-solution { grid-template-columns: 1fr; }
+  .portfolio-image { min-height: 0; }
+  .portfolio-image img { position: static; height: auto; aspect-ratio: 1.2; }
+  .portfolio-content { padding: 24px 20px; }
+  .portfolio-content h2 { font-size: 28px; }
+  .portfolio-content > p { font-size: 14px; }
+  .portfolio-features { gap: 10px; }
+  .portfolio-content > .button { width: 100%; }
+  .portfolio-cta { padding: 24px var(--gutter); }
+  .detail-highlights { grid-template-columns: 1fr; gap: 8px; }
+  .detail-highlights > div { padding: 12px; }
+  .detail-section { padding-block: 36px; }
+  .detail-section .section-intro { margin-bottom: 24px; }
+  .detail-grid-three, .detail-industries-grid { grid-template-columns: 1fr; }
+  .detail-industry { padding: 20px; }
+  .detail-industry p { font-size: 14px; }
+  .process-card { padding: 20px; }
+  .detail-cta { padding-block: 24px; }
+  .detail-cta .cta-inner > div:first-child { max-width: none; }
+  .detail-cta h2, .portfolio-cta h2 { font-size: 27px; }
+}
