@@ -1,0 +1,5 @@
+:root {
+  --navy: #0e1d30; --ink: #172b42; --blue: #0077a8; --blue-hover: #005c84; --sky: #66c5f0;
+  --text: #58616c; --muted-light: #b3bfce; --white: #fff; --surface: #f7f8ff; --surface-blue: #edf2ff;
+  --border: #e5eafa; --max-width: 1216px; --gutter: 32px; --space-section: 42px; --grid-gap: 24px; --radius: 2px;
+}
