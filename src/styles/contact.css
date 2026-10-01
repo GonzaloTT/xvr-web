@@ -1,5 +1,5 @@
 /* Estilos exclusivos de Contacto; reutiliza los tokens globales. */
-.contact-page { --contact-panel: #203247; --contact-radius: 8px; }
+.contact-page { --contact-panel: #203247; --contact-radius: var(--radius-lg); }
 .contact-layout { display: grid; grid-template-columns: 1.42fr 1fr; gap: var(--grid-gap); align-items: start; }
 .contact-introduction { background: var(--navy); color: var(--white); padding-block: 40px; }
 .contact-introduction .eyebrow { color: var(--sky); }

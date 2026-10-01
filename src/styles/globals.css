@@ -9,24 +9,6 @@
 html { scroll-padding-top: calc(var(--header-height) + 24px); }
 .site-header { position: sticky; top: 0; z-index: 50; background: var(--white); }
 .main-nav { gap: 16px; }
-.solution-card, .industry-card, .partner-logo {
-  transition: transform var(--interaction-duration) ease,
-    box-shadow var(--interaction-duration) ease, border-color var(--interaction-duration) ease;
-}
-@media (hover: hover) {
-  .solution-card:hover, .industry-card:hover, .partner-logo:hover {
-    transform: translateY(-3px);
-    box-shadow: var(--card-hover-shadow);
-    border-color: var(--card-hover-border);
-  }
-}
-/* Informational cards do not gain artificial tab stops or click actions. */
-.solution-card:has(:focus-visible), .industry-card:has(:focus-visible),
-.partner-logo:has(:focus-visible), .partner-logo:focus-visible {
-  transform: translateY(-3px);
-  box-shadow: var(--card-hover-shadow);
-  border-color: var(--card-hover-border);
-}
 @media (min-width: 1101px) and (max-width: 1250px) {
   .header-inner { gap: 16px; }
   .main-nav { gap: 12px; }
@@ -39,9 +21,87 @@ html { scroll-padding-top: calc(var(--header-height) + 24px); }
   .main-nav { gap: 0; max-height: calc(100dvh - var(--header-height)); overflow-y: auto; }
 }
 @media (max-width: 700px) { :root { --header-height: 100px; } }
+
+/* UI polish trial: presentation only, centralized for easy adjustment. */
+body :is(.button, .menu-toggle, .carousel-pause, .accessories-filters button) {
+  border-radius: var(--radius-md);
+  transition: transform var(--transition-base), box-shadow var(--transition-base),
+    border-color var(--transition-base), background-color var(--transition-base), color var(--transition-base);
+}
+body :is(.button, .menu-toggle, .carousel-pause, .accessories-filters button):focus-visible {
+  outline: 3px solid var(--blue);
+  outline-offset: 4px;
+  box-shadow: var(--button-hover-shadow);
+}
+body :is(.hero, .cta-section) .button:focus-visible,
+body .carousel-pause:focus-visible { outline-color: var(--sky); }
+body :is(.value-card, .solution-card, .industry-card, .partner-logo, .accompaniment-card, .about-highlights > div, .portfolio-solution, .process-card, .detail-image-card, .detail-benefit, .detail-industry, .accessories-integration-card, .accessory-card, .accessories-advantage-card, .contact-region, .contact-trust-card, .contact-direct, .contact-attention) {
+  border-radius: var(--radius-md);
+  transition: transform var(--transition-base), box-shadow var(--transition-base), border-color var(--transition-base);
+}
+body :is(.industry-card, .accessories-integration-card, .contact-direct) {
+  --card-hover-shadow: var(--card-dark-shadow);
+}
+body :is(.value-card, .solution-card, .industry-card, .partner-logo, .accompaniment-card, .about-highlights > div, .portfolio-solution, .process-card, .detail-image-card, .detail-benefit, .detail-industry, .accessories-integration-card, .accessory-card, .accessories-advantage-card, .contact-region, .contact-trust-card, .contact-direct, .contact-attention):has(:focus-visible) {
+  transform: translateY(-3px);
+  box-shadow: var(--card-hover-shadow);
+  border-color: var(--card-hover-border);
+}
+/* Round image corners without clipping keyboard focus or moving images. */
+.solution-card > img, .detail-card-image img { border-radius: var(--radius-md) var(--radius-md) 0 0; }
+.portfolio-image img, .ecosystem-card > img, .accessory-card-image { border-radius: var(--radius-sm); }
+.icon-tile { border-radius: var(--radius-sm); }
+.main-nav > a:not(.button), .footer-grid a,
+.text-link, .solution-body > a, .accessory-card-footer a {
+  transition: color var(--transition-base), text-decoration-color var(--transition-base);
+}
+.main-nav > a:not(.button):focus-visible { color: var(--blue); }
+.text-link, .solution-body > a, .accessory-card-footer a {
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  text-underline-offset: 4px;
+  text-decoration-thickness: 1px;
+}
+:is(.text-link, .solution-body > a, .accessory-card-footer a):focus-visible {
+  text-decoration-color: currentColor;
+}
+:is(.button, .solution-body > a, .accessory-card-footer a) > span[aria-hidden="true"] {
+  display: inline-block;
+  transition: transform var(--transition-base);
+}
+body .contact-field :is(input, select, textarea) {
+  border-radius: var(--radius-md);
+  transition: border-color var(--transition-base), box-shadow var(--transition-base), background-color var(--transition-base);
+}
+body .contact-field :is(input, select, textarea):focus {
+  border-color: var(--blue);
+  box-shadow: var(--focus-halo);
+}
+body .contact-field :is(input, select, textarea):focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: 2px;
+}
+@media (hover: hover) and (pointer: fine) {
+  body :is(.button, .menu-toggle, .carousel-pause, .accessories-filters button):hover { transform: translateY(-1px); box-shadow: var(--button-hover-shadow); }
+  body :is(.value-card, .solution-card, .industry-card, .partner-logo, .accompaniment-card, .about-highlights > div, .portfolio-solution, .process-card, .detail-image-card, .detail-benefit, .detail-industry, .accessories-integration-card, .accessory-card, .accessories-advantage-card, .contact-region, .contact-trust-card, .contact-direct, .contact-attention):hover {
+    transform: translateY(-3px);
+    box-shadow: var(--card-hover-shadow);
+    border-color: var(--card-hover-border);
+  }
+  .menu-toggle:hover { background: var(--surface-blue); border-color: var(--card-hover-border); }
+  .carousel-pause:hover { background: #24364c; border-color: var(--sky); }
+  .main-nav > a:not(.button):hover { color: var(--blue); text-decoration: underline; text-underline-offset: 7px; }
+  :is(.text-link, .solution-body > a, .accessory-card-footer a):hover { text-decoration-color: currentColor; }
+  :is(.button, .solution-body > a, .accessory-card-footer a):hover > span[aria-hidden="true"] { transform: translateX(2px); }
+}
+body :is(.button, .menu-toggle, .carousel-pause, .accessories-filters button):active { transform: translateY(0); box-shadow: none; }
 @media (prefers-reduced-motion: reduce) {
-  .solution-card, .industry-card, .partner-logo { transition: none; }
-  .solution-card:hover, .industry-card:hover, .partner-logo:hover,
-  .solution-card:has(:focus-visible), .industry-card:has(:focus-visible),
-  .partner-logo:has(:focus-visible), .partner-logo:focus-visible { transform: none; }
+  body :is(.button, .menu-toggle, .carousel-pause, .accessories-filters button), body :is(.value-card, .solution-card, .industry-card, .partner-logo, .accompaniment-card, .about-highlights > div, .portfolio-solution, .process-card, .detail-image-card, .detail-benefit, .detail-industry, .accessories-integration-card, .accessory-card, .accessories-advantage-card, .contact-region, .contact-trust-card, .contact-direct, .contact-attention),
+  body .contact-field :is(input, select, textarea),
+  .main-nav > a:not(.button), .footer-grid a,
+  .text-link, .solution-body > a, .accessory-card-footer a,
+  :is(.button, .solution-body > a, .accessory-card-footer a) > span[aria-hidden="true"] { transition: none; }
+  body :is(.button, .menu-toggle, .carousel-pause, .accessories-filters button):hover, body :is(.button, .menu-toggle, .carousel-pause, .accessories-filters button):active,
+  body :is(.value-card, .solution-card, .industry-card, .partner-logo, .accompaniment-card, .about-highlights > div, .portfolio-solution, .process-card, .detail-image-card, .detail-benefit, .detail-industry, .accessories-integration-card, .accessory-card, .accessories-advantage-card, .contact-region, .contact-trust-card, .contact-direct, .contact-attention):hover, body :is(.value-card, .solution-card, .industry-card, .partner-logo, .accompaniment-card, .about-highlights > div, .portfolio-solution, .process-card, .detail-image-card, .detail-benefit, .detail-industry, .accessories-integration-card, .accessory-card, .accessories-advantage-card, .contact-region, .contact-trust-card, .contact-direct, .contact-attention):has(:focus-visible),
+  :is(.button, .solution-body > a, .accessory-card-footer a):hover > span[aria-hidden="true"] { transform: none; }
 }

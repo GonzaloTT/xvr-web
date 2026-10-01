@@ -4,6 +4,14 @@
   --border: #e5eafa; --max-width: 1216px; --gutter: 32px; --space-section: 42px; --grid-gap: 24px; --radius: 2px;
   --header-height: 97px;
   --card-hover-shadow: 0 8px 22px rgb(14 29 48 / 12%);
-  --card-hover-border: #78a8c0;
+  --card-hover-border: #b3cbd9;
   --interaction-duration: 200ms;
+  --radius-sm: 4px;
+  --radius-md: 7px;
+  --radius-lg: 10px;
+  --interaction-easing: ease-out;
+  --transition-base: var(--interaction-duration) var(--interaction-easing);
+  --button-hover-shadow: 0 4px 12px rgb(14 29 48 / 16%);
+  --focus-halo: 0 0 0 4px rgb(0 119 168 / 12%);
+  --card-dark-shadow: 0 8px 22px rgb(0 10 24 / 22%), inset 0 0 0 1px rgb(102 197 240 / 16%);
 }
