@@ -1,3 +1,4 @@
+import { assetUrl } from '../../utils/assetUrl';
 import { Link } from 'react-router-dom';
 import Icon from '../Icon';
 
@@ -5,7 +6,7 @@ export default function AccessoryCard({ id, category, eyebrow, title, image, alt
   return (
     <article className="accessory-card" data-category={category} aria-labelledby={`accessory-${id}-title`}>
       <span className="accessory-card-eyebrow">{eyebrow || category}</span>
-      <img className="accessory-card-image" src={image} alt={alt} loading="lazy" width="600" height="210" />
+      <img className="accessory-card-image" src={assetUrl(image)} alt={alt} loading="lazy" width="600" height="210" />
       <h3 id={`accessory-${id}-title`}>{title}</h3>
       <p className="accessory-card-description">{description}</p>
       {highlights.length > 0 && (

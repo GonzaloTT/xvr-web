@@ -1,3 +1,4 @@
+import { assetUrl } from '../../utils/assetUrl';
 import { Link } from 'react-router-dom';
 import HeroCarousel from '../../components/HeroCarousel/HeroCarousel';
 import CTASection from '../../components/CTASection/CTASection';
@@ -58,7 +59,7 @@ export default function SolutionDetail({ solution }) {
           <div className="grid-four">
             {applications.items.map(item => (
               <article key={item.title} className="detail-image-card">
-                <div className="detail-card-image"><img src={item.image} alt={item.alt || ''} loading="lazy" width="600" height="360" /><span>{item.category}</span></div>
+                <div className="detail-card-image"><img src={assetUrl(item.image)} alt={item.alt || ''} loading="lazy" width="600" height="360" /><span>{item.category}</span></div>
                 <div className="detail-card-body"><h3>{item.title}</h3><p>{item.description}</p></div>
               </article>
             ))}
@@ -102,7 +103,7 @@ export default function SolutionDetail({ solution }) {
           <div className="detail-grid-three">
             {ecosystem.items.map((item, index) => (
               <article key={item.title} className="detail-image-card ecosystem-card">
-                <img src={item.image} alt={item.alt || ''} loading="lazy" width="600" height="320"/>
+                <img src={assetUrl(item.image)} alt={item.alt || ''} loading="lazy" width="600" height="320"/>
                 <div className="process-card-meta"><span>{item.category}</span><span>PILAR {String(index + 1).padStart(2, '0')}</span></div>
                 <h3>{item.title}</h3><p>{item.description}</p>
               </article>

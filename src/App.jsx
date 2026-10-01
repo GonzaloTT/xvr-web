@@ -34,9 +34,10 @@ function PendingRoute({ unknown = false }) {
   return <main id="contenido" className="container pending-route"><span className="eyebrow">XVR</span><h1>{unknown ? 'Página no encontrada' : 'Contenido disponible próximamente'}</h1><p>{unknown ? 'La dirección solicitada no existe.' : 'Esta sección está reservada para una próxima fase del sitio.'}</p><Link className="button" to="/">Volver al inicio <span aria-hidden="true">→</span></Link></main>;
 }
 export default function App() {
+  const location = useLocation();
   return (
     <>
-      <a className="skip-link" href="#contenido">Saltar al contenido</a>
+      <Link className="skip-link" to={{ pathname: location.pathname, search: location.search, hash: '#contenido' }}>Saltar al contenido</Link>
       <ScrollToLocation />
       <Header />
       <Routes>

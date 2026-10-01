@@ -100,3 +100,11 @@ Para Hero, soluciones e industrias: agregar archivos y actualizar sus rutas en `
 Ver `VALIDATION.md`. No existe configuración previa de lint o tests. La validación de esta fase se centra en build y navegador real; no se añadieron dependencias de pruebas al producto.
 
 Siguiente fase pendiente de autorización expresa. No se ejecutaron operaciones Git.
+
+## GitHub Pages deployment
+
+El sitio se despliega automáticamente desde `main` mediante GitHub Actions, con el workflow `.github/workflows/deploy-pages.yml`. También admite ejecución manual desde Actions.
+
+En GitHub, configurar **Settings → Pages → Build and deployment → Source: GitHub Actions**. URL esperada: https://gonzalott.github.io/xvr-web/.
+
+Este deployment usa HashRouter (por ejemplo, `/xvr-web/#/soluciones`), por lo que no requiere el fallback de BrowserRouter mencionado en la documentación histórica. Vite usa `/xvr-web/` al compilar y `/` durante desarrollo; las imágenes públicas se resuelven con `assetUrl` e `import.meta.env.BASE_URL`. `dist/` sigue ignorado y se publica únicamente como artifact.
