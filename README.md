@@ -1,8 +1,10 @@
 # XVR — Prototipo web
 
-Estado actual: **Fase 2** implementada sobre la base de Fase 1. Incluye `/soluciones`, el template de detalle y `/soluciones/marcado-laser`, además de Blog reservado, Header sticky y hover/focus de cards. Ver [documentación y validación de Fase 2](docs/PHASE-2.md).
+Estado actual: **Fase 3** incorpora `/accesorios-perifericos`, con catálogo filtrable y componentes globales existentes. Ver [documentación y validación de Fase 3](docs/PHASE-3.md).
 
-La documentación siguiente describe la base original de Fase 1; las rutas y cambios de Fase 2 se detallan en el documento enlazado.
+La [Fase 2](docs/PHASE-2.md) incluye `/soluciones`, el template de detalle y `/soluciones/marcado-laser`, además de Blog reservado, Header sticky y hover/focus de cards.
+
+La documentación siguiente describe la base original de Fase 1; las rutas y cambios posteriores se detallan en los documentos enlazados.
 
 ## Base de Fase 1
 
