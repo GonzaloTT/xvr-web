@@ -1,0 +1,112 @@
+/* Scoped to Phase 3. Existing pages and global components keep their styles. */
+.accessories-page {
+  --accessories-panel: #1b2d40;
+  --accessories-section-space: 96px;
+}
+.accessories-page .accessories-hero { min-height: 475px; padding-block: 88px 76px; }
+.accessories-hero .hero-copy { max-width: 850px; }
+.accessories-hero h1 { max-width: 790px; }
+.accessories-hero .hero-copy > p { max-width: 780px; }
+.accessories-integration { background: var(--navy); color: var(--white); padding-block: 44px; }
+.accessories-integration .eyebrow { color: var(--sky); }
+.accessories-integration-heading { display: grid; grid-template-columns: 1.7fr 1fr; gap: 32px; align-items: start; margin-bottom: 40px; }
+.accessories-integration-heading h2 { font-size: 34px; }
+.accessories-integration-heading > p { font-size: 14px; color: var(--muted-light); }
+.accessories-three-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--grid-gap); }
+.accessories-integration-card { display: flex; flex-direction: column; padding: 24px; border-radius: 6px; background: var(--accessories-panel); }
+.accessories-concept-meta { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-bottom: 18px; }
+.accessories-concept-meta .icon-tile { margin: 0; background: var(--navy); color: var(--sky); }
+.accessories-concept-meta > span:last-child { font-size: 10px; color: var(--sky); letter-spacing: .2px; }
+.accessories-integration-card h3 { font-size: 20px; }
+.accessories-integration-card p { font-size: 15px; color: var(--muted-light); margin: 8px 0 24px; }
+.accessories-integration-card small { display: block; border-top: 1px solid #36495d; padding-top: 16px; margin-top: auto; color: var(--sky); font-size: 11px; }
+.accessories-catalog { padding-block: var(--accessories-section-space); background: var(--surface); }
+.accessories-catalog-heading { display: flex; align-items: end; justify-content: space-between; gap: 24px; }
+.accessories-catalog-heading h2 { max-width: 940px; }
+.accessories-result-count { flex-shrink: 0; font-size: 11px; color: var(--text); text-align: right; }
+.accessories-filters { display: flex; flex-wrap: wrap; gap: 6px; margin: 24px 0 36px; }
+.accessories-filters button {
+  border: 1px solid transparent; border-radius: var(--radius);
+  padding: 10px 16px; min-height: 44px; max-width: 100%;
+  background: var(--surface-blue); color: var(--ink); font-size: 13px;
+  transition: background-color var(--interaction-duration), color var(--interaction-duration), border-color var(--interaction-duration);
+}
+.accessories-filters button:hover { background: var(--border); border-color: var(--card-hover-border); }
+.accessories-filters button[aria-pressed="true"] { background: var(--navy); color: var(--white); }
+.accessories-filters button:focus-visible { outline: 3px solid var(--blue); outline-offset: 3px; }
+.accessories-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--grid-gap); align-items: stretch; animation: accessories-reveal var(--interaction-duration) ease; }
+@keyframes accessories-reveal { from { opacity: .4; } to { opacity: 1; } }
+.accessory-card {
+  display: flex; flex-direction: column; min-width: 0;
+  padding: 24px; background: var(--white); border: 1px solid var(--border); border-radius: 6px;
+  transition: transform var(--interaction-duration) ease, box-shadow var(--interaction-duration) ease, border-color var(--interaction-duration) ease;
+}
+.accessory-card-eyebrow { display: block; align-self: flex-start; margin-bottom: 16px; padding: 4px 8px; background: var(--surface-blue); color: var(--blue); font-size: 10px; font-weight: 700; letter-spacing: .3px; }
+.accessory-card-image { width: 100%; height: auto; aspect-ratio: 2.8; object-fit: cover; margin-bottom: 20px; }
+.accessory-card h3 { font-size: 24px; letter-spacing: -.5px; }
+.accessory-card-description { font-size: 15px; margin-top: 8px; }
+.accessory-highlights { padding: 16px; margin-block: 20px; background: var(--surface-blue); }
+.accessory-highlights h4 { font-size: 10px; letter-spacing: .5px; margin: 0 0 8px; color: var(--text); }
+.accessory-highlights ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 9px; }
+.accessory-highlights li { display: flex; align-items: start; gap: 7px; font-size: 13px; line-height: 1.45; }
+.accessory-highlights .icon { width: 15px; height: 15px; color: var(--blue); margin-top: 2px; }
+.accessory-card-footer { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px 16px; margin-top: auto; }
+.accessory-card-footer small { font-size: 11px; color: var(--text); }
+.accessory-card-footer a { display: inline-flex; align-items: center; justify-content: space-between; gap: 8px; min-height: 44px; margin-left: auto; color: var(--blue); font-size: 14px; font-weight: 700; }
+.accessory-card-footer a:hover { color: var(--blue-hover); text-decoration: underline; }
+.accessory-card-footer a:focus-visible { outline: 3px solid var(--blue); outline-offset: 4px; }
+@media (hover: hover) {
+  .accessory-card:hover { transform: translateY(-3px); box-shadow: var(--card-hover-shadow); border-color: var(--card-hover-border); }
+}
+.accessory-card:has(:focus-visible) { transform: translateY(-3px); box-shadow: var(--card-hover-shadow); border-color: var(--card-hover-border); }
+.accessories-advantages { padding-block: var(--accessories-section-space); }
+.accessories-advantages h2 { max-width: 850px; }
+.accessories-advantages .section-intro { max-width: 790px; margin-bottom: 40px; }
+.accessories-advantage-card { display: flex; flex-direction: column; padding: 24px; background: var(--surface-blue); border-radius: 6px; }
+.accessories-advantage-card .eyebrow { font-size: 10px; letter-spacing: .5px; margin-block: 8px 12px; }
+.accessories-advantage-card h3 { font-size: 19px; }
+.accessories-advantage-card p { font-size: 15px; margin: 10px 0 28px; }
+.accessories-advantage-card small { display: block; margin-top: auto; font-size: 11px; color: var(--text); }
+.accessories-advantage-card small > span { color: var(--blue); }
+.accessories-cta { padding-block: var(--accessories-section-space); background: var(--navy); }
+.accessories-cta .cta-section { background: var(--accessories-panel); border-radius: 12px; padding-block: 64px; }
+.accessories-cta .cta-inner { width: calc(100% - 128px); }
+.accessories-cta .cta-inner > div:first-child { max-width: 680px; }
+.accessories-cta .button { background: var(--sky); color: var(--navy); }
+.accessories-cta .button:hover { background: var(--white); }
+@media (max-width: 1100px) {
+  .accessories-page { --accessories-section-space: 64px; }
+  .accessories-integration-heading { grid-template-columns: 1fr; gap: 16px; }
+  .accessories-integration-heading h2 { font-size: 30px; }
+  .accessories-integration-heading > p { max-width: 700px; }
+  .accessories-three-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .accessories-catalog-heading { display: block; }
+  .accessories-result-count { margin-top: 12px; text-align: left; }
+  .accessory-card { padding: 20px; }
+  .accessory-card h3 { font-size: 22px; }
+  .accessories-cta .cta-inner { width: calc(100% - 64px); }
+  .accessories-cta .cta-inner > div:first-child { max-width: 60%; }
+}
+@media (max-width: 700px) {
+  .accessories-page { --accessories-section-space: 40px; }
+  .accessories-page .accessories-hero { min-height: 0; padding-block: 44px 68px; }
+  .accessories-integration { padding-block: 36px; }
+  .accessories-integration-heading { margin-bottom: 24px; }
+  .accessories-integration-heading h2 { font-size: 29px; }
+  .accessories-three-grid, .accessories-grid { grid-template-columns: 1fr; }
+  .accessories-filters { gap: 8px; margin-bottom: 24px; }
+  .accessories-filters button { padding-inline: 12px; font-size: 12px; }
+  .accessory-card-image { aspect-ratio: 1.8; }
+  .accessory-card-footer { flex-direction: column; align-items: stretch; }
+  .accessory-card-footer a { margin-left: 0; }
+  .accessories-advantages .section-intro { margin-bottom: 24px; }
+  .accessories-cta .cta-section { padding-block: 36px; }
+  .accessories-cta .cta-inner { width: calc(100% - 40px); }
+  .accessories-cta .cta-inner > div:first-child { max-width: none; }
+  .accessories-cta h2 { font-size: 27px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .accessories-grid { animation: none; }
+  .accessory-card, .accessories-filters button { transition: none; }
+  .accessory-card:hover, .accessory-card:has(:focus-visible) { transform: none; }
+}
