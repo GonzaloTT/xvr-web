@@ -6,6 +6,7 @@ import Home from './pages/Home/Home';
 import Solutions from './pages/Solutions/Solutions';
 import SolutionDetail from './pages/SolutionDetail/SolutionDetail';
 import Accessories from './pages/Accessories/Accessories';
+import Contact from './pages/Contact/Contact';
 import { solutionDetails } from './data/solutionsData';
 import { paths } from './routes/paths';
 
@@ -18,7 +19,7 @@ function ScrollToLocation() {
       [paths.solutions]: 'Soluciones Láser',
       [paths.blog]: 'Blog — Próximamente',
       [paths.accessories]: 'Accesorios y Periféricos',
-      [paths.contact]: 'Contacto — Próximamente',
+      [paths.contact]: 'Contacto',
     })[pathname] || 'XVR';
     document.title = `${title} | XVR Soluciones Láser Industriales`;
   }, [pathname]);
@@ -42,10 +43,11 @@ export default function App() {
         <Route path={paths.home} element={<Home />} />
         <Route path={paths.solutions} element={<Solutions />} />
         <Route path={paths.accessories} element={<Accessories />} />
+        <Route path={paths.contact} element={<Contact />} />
         {Object.values(solutionDetails).map(solution => (
           <Route key={solution.slug} path={paths.solution(solution.slug)} element={<SolutionDetail solution={solution} />} />
         ))}
-        {[`${paths.solutions}/:slug`, paths.blog, paths.contact].map(path => (
+        {[`${paths.solutions}/:slug`, paths.blog].map(path => (
           <Route key={path} path={path} element={<PendingRoute />} />
         ))}
         <Route path="*" element={<PendingRoute unknown />} />
