@@ -3,39 +3,25 @@ export const paths = {
   solutions: '/soluciones',
   industries: '/soluciones-industria',
   industry: (slug) => `/soluciones-industria/${slug}`,
-  accessories: '/accesorios-perifericos',
+  accessories: '/productos/accesorios-perifericos',
+  legacyAccessories: '/accesorios-perifericos',
+  brands: '/marcas',
+  brand: slug => `/marcas/${slug}`,
+  products: '/productos',
+  product: slug => `/productos/${slug}`,
+  spareParts: '/refacciones',
+  sparePart: slug => `/refacciones/${slug}`,
   blog: '/blog',
   contact: '/contacto',
   solution: (slug) => `/soluciones/${slug}`,
 };
 
 export const navigation = [
-  {
-    label: 'Inicio',
-    to: paths.home,
-  },
-  {
-    label: 'Procesos Láser',
-    to: paths.solutions,
-  },
-  {
-    label: 'Accesorios y Periféricos',
-    to: paths.accessories,
-  },
-  {
-    label: 'Industrias',
-    to: paths.industries,
-  },
-  {
-    label: 'Nosotros',
-    to: '/#nosotros',
-  },
-  {
-    label: 'Blog',
-    to: paths.blog,
-  },
-  {
-    label: '911 XVR',
-    to: paths.contact,
-  },
+  { label: 'Inicio', to: paths.home },
+  { label: 'Soluciones', to: paths.industries },
+  { label: 'Procesos Láser', to: paths.solutions },
+  { label: 'Productos', to: paths.products },
+  { label: 'Nuestras Marcas', to: paths.brands },
+  { label: 'Universo Láser', to: paths.blog },
+  { label: '911 XVR', to: paths.contact },
 ];
