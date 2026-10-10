@@ -15,7 +15,7 @@ export default function ContactForm() {
     <form className="contact-form contact-panel" onSubmit={handleDemoSubmit} aria-labelledby="contact-form-title" aria-describedby="contact-demo-notice">
       <span className="eyebrow">FORMULARIO DE CONTACTO</span>
       <h2 id="contact-form-title">Consulta de proyecto o soporte</h2>
-      <p className="contact-form-intro">Comparte los datos de tu empresa y describe tu proyecto nuevo o la necesidad de soporte.</p>
+      <p className="contact-form-intro">Prueba el formulario con datos de ejemplo y describe una aplicación o necesidad de soporte. Esta prueba no inicia una atención real.</p>
       <p className="contact-required-note">Los campos con <span aria-hidden="true">*</span> son obligatorios.</p>
       <div className="contact-fields">
         {contactFields.map(field => (

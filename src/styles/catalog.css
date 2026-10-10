@@ -1,0 +1,31 @@
+/* Informational catalogs only; shared branding and interaction tokens. */
+.catalog-page h1 { overflow-wrap: anywhere; }
+.catalog-page h2 { font-size: 28px; }
+.catalog-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--grid-gap); margin-block: 24px 36px; }
+.catalog-card { min-width: 0; padding: 22px; background: var(--white); border: 1px solid var(--border); border-radius: var(--radius-md); display: flex; flex-direction: column; gap: 16px; overflow-wrap: anywhere; transition: box-shadow var(--transition-base), border-color var(--transition-base); }
+.catalog-card:hover, .catalog-card:focus-visible, .catalog-card:focus-within { border-color: var(--card-hover-border); box-shadow: var(--card-hover-shadow); }
+.catalog-card > .text-link { margin-top: auto; }
+.brands-grid { grid-auto-rows: 1fr; }
+.brand-card .partner-logo { padding: 8px; height: 72px; min-height: 72px; flex-shrink: 0; background: var(--surface); border-radius: var(--radius-sm); }
+.brand-card > p { font-size: 14px; line-height: 1.5; }
+.catalog-note { margin-block: 20px; max-width: 850px; font-size: 13px; }
+.catalog-empty { padding: 24px; margin-block: 24px; border: 1px solid var(--border); border-radius: var(--radius-md); background: var(--surface); max-width: 900px; }
+.catalog-detail-heading { margin-top: 24px; }
+.catalog-detail-heading .partner-logo { width: fit-content; margin-bottom: 16px; }
+.catalog-detail-grid { display: grid; grid-template-columns: 1fr 1.5fr; gap: 32px; margin-top: 28px; align-items: start; }
+.catalog-detail-grid > * { min-width: 0; }
+.catalog-image { width: 100%; aspect-ratio: 4 / 3; object-fit: contain; border-radius: var(--radius-sm); background: var(--surface); }
+.catalog-image-pending { display: grid; place-items: center; color: var(--text); font-size: 14px; }
+.catalog-related { margin-top: 32px; max-width: 900px; }
+.catalog-related ul { padding-left: 20px; }
+.catalog-related li + li { margin-top: 10px; }
+.catalog-related dl > div { margin-top: 14px; }
+.catalog-related dt { font-weight: 700; }
+.catalog-related dd { margin: 4px 0 0; color: var(--text); }
+.catalog-search { max-width: 620px; margin-block: 24px; }
+.catalog-search label { display: block; font-weight: 700; margin-bottom: 8px; }
+.catalog-search input { width: 100%; min-height: 44px; padding: 12px; border: 1px solid var(--border); border-radius: var(--radius-md); font: inherit; color: var(--ink); }
+.catalog-search input:focus { border-color: var(--blue); box-shadow: var(--focus-halo); }
+@media (max-width: 1100px) { .catalog-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 700px) { .catalog-grid, .catalog-detail-grid { grid-template-columns: 1fr; } .catalog-page h2 { font-size: 24px; } }
+@media (prefers-reduced-motion: reduce) { .catalog-card { transition: none; } }

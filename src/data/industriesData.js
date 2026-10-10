@@ -54,7 +54,7 @@ const industryDetails = {
           },
           {
             "title": "Retos a evaluar con XVR",
-            "text": "Retos a revisar con XVR: marcas difíciles de leer, acceso a la zona de unión y variaciones entre componentes."
+            "text": "marcas difíciles de leer, acceso a la zona de unión y variaciones entre componentes."
           }
         ]
       },
@@ -64,7 +64,7 @@ const industryDetails = {
         "items": [
           {
             "title": "Aplicaciones a evaluar",
-            "applications": ["Códigos en piezas","Unión de contactos","Preparación de superficies para ensamble"]
+            "applications": ["Códigos de identificación en carcasas","Unión de contactos de batería","Preparación de zonas de ensamble"]
           },
           {
             "title": "Procesos posibles",
@@ -78,11 +78,11 @@ const industryDetails = {
         "items": [
           {
             "title": "Opciones tecnológicas",
-            "text": "Fuentes láser, óptica y sistemas de posicionamiento son opciones a evaluar; su selección depende de la pieza."
+            "text": "El escaneo del haz permite plantear marcas en distintas zonas; el posicionamiento y la sujeción ayudan a estudiar el acceso a una unión."
           },
           {
-            "title": "Soluciones por definir",
-            "text": "Soluciones posibles según el proceso: una estación de trabajo o integración en línea, sujetas a revisión con XVR."
+            "title": "Integración a evaluar",
+            "text": "Una estación de marcado o una operación de unión en línea son ejemplos de configuración; su viabilidad y el alcance de XVR deben evaluarse."
           }
         ]
       }
@@ -102,7 +102,7 @@ const industryDetails = {
           },
           {
             "title": "Retos a evaluar con XVR",
-            "text": "Retos a revisar con XVR: espacio de marcado limitado, geometrías delicadas y efectos del proceso sobre el material."
+            "text": "espacio de marcado limitado, geometrías delicadas y efectos del proceso sobre el material."
           }
         ]
       },
@@ -112,7 +112,7 @@ const industryDetails = {
         "items": [
           {
             "title": "Aplicaciones a evaluar",
-            "applications": ["Identificación de instrumental","Corte de pequeños componentes","Unión de piezas"]
+            "applications": ["Identificación de instrumental","Corte de pequeños tubos y láminas","Unión de componentes de dispositivos"]
           },
           {
             "title": "Procesos posibles",
@@ -126,11 +126,11 @@ const industryDetails = {
         "items": [
           {
             "title": "Opciones tecnológicas",
-            "text": "Láseres pulsados, óptica de enfoque y posicionamiento son alternativas a estudiar según la aplicación."
+            "text": "La óptica de enfoque y las sujeciones para piezas pequeñas son elementos a considerar al estudiar una marca, un corte o una unión."
           },
           {
-            "title": "Soluciones por definir",
-            "text": "Soluciones posibles según el proceso: estaciones para piezas pequeñas y sujeciones adaptadas, por definir con XVR."
+            "title": "Integración a evaluar",
+            "text": "Una estación con sujeción adaptada puede ser un punto de partida. El uso previsto del dispositivo y el alcance de XVR requieren revisión."
           }
         ]
       }
@@ -150,7 +150,7 @@ const industryDetails = {
           },
           {
             "title": "Retos a evaluar con XVR",
-            "text": "Retos a revisar con XVR: áreas de trabajo reducidas, proximidad de elementos sensibles y combinación de materiales."
+            "text": "áreas de trabajo reducidas, proximidad de elementos sensibles y combinación de materiales."
           }
         ]
       },
@@ -160,7 +160,7 @@ const industryDetails = {
         "items": [
           {
             "title": "Aplicaciones a evaluar",
-            "applications": ["Códigos en componentes","Unión de contactos","Retirada localizada de recubrimientos"]
+            "applications": ["Códigos en encapsulados electrónicos","Unión de contactos y terminales","Retirada localizada de recubrimientos"]
           },
           {
             "title": "Procesos posibles",
@@ -174,11 +174,11 @@ const industryDetails = {
         "items": [
           {
             "title": "Opciones tecnológicas",
-            "text": "Fuentes pulsadas, óptica de enfoque y visión para posicionamiento son opciones cuya compatibilidad debe evaluarse."
+            "text": "La visión para localizar piezas y el control de la trayectoria del haz son opciones a evaluar cuando el área de trabajo es reducida."
           },
           {
-            "title": "Soluciones por definir",
-            "text": "Soluciones posibles según el proceso: estaciones de identificación o procesamiento localizado, sujetas a revisión con XVR."
+            "title": "Integración a evaluar",
+            "text": "Una estación de identificación o retirada localizada de recubrimientos puede estudiarse junto con la secuencia de ensamble. XVR debe confirmar el alcance."
           }
         ]
       }
@@ -198,7 +198,7 @@ const industryDetails = {
           },
           {
             "title": "Retos a evaluar con XVR",
-            "text": "Retos a revisar con XVR: superficies complejas, acceso a zonas de trabajo y conservación de la identificación entre etapas."
+            "text": "superficies complejas, acceso a zonas de trabajo y conservación de la identificación entre etapas."
           }
         ]
       },
@@ -208,7 +208,7 @@ const industryDetails = {
         "items": [
           {
             "title": "Aplicaciones a evaluar",
-            "applications": ["Identificación de piezas","Preparación de superficies","Procesamiento de geometrías específicas"]
+            "applications": ["Identificación de soportes y carcasas","Preparación de zonas de unión","Corte de contornos y perforaciones"]
           },
           {
             "title": "Procesos posibles",
@@ -222,11 +222,11 @@ const industryDetails = {
         "items": [
           {
             "title": "Opciones tecnológicas",
-            "text": "Fuentes láser, sistemas de posicionamiento y herramientas de seguimiento del proceso son alternativas a estudiar."
+            "text": "El posicionamiento de piezas y el seguimiento del proceso pueden ayudar a definir recorridos sobre geometrías complejas."
           },
           {
-            "title": "Soluciones por definir",
-            "text": "Soluciones posibles según el proceso: estaciones adaptadas al componente o integración de operaciones, por definir con XVR."
+            "title": "Integración a evaluar",
+            "text": "Una estación adaptada a la pieza permite plantear operaciones delimitadas. Los criterios de aceptación y el alcance de XVR deben acordarse."
           }
         ]
       }

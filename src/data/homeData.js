@@ -67,126 +67,55 @@ export const solutions = [
   href: paths.solution(item.slug),
 }));
 
-export const industries = [
-  {
-    "slug": "automotriz",
-    "icon": "car",
-    "title": "Automotriz y E-Mobility",
-    "description": "Identificación y unión de componentes para vehículos y baterías."
-  },
-  {
-    "slug": "medica",
-    "icon": "medical",
-    "title": "Dispositivos Médicos",
-    "description": "Marcado y ensamble de instrumental y componentes médicos."
-  },
-  {
-    "slug": "electronica",
-    "icon": "chip",
-    "title": "Electrónica y Semiconductores",
-    "description": "Identificación y procesamiento de pequeños componentes electrónicos."
-  },
-  {
-    "slug": "aeronautica",
-    "icon": "plane",
-    "title": "Aeronáutica y Defensa",
-    "description": "Identificación y trabajo de superficies en componentes aeronáuticos y de defensa."
-  }
-].map(item => ({
-  ...item,
-  image: `/images/industries/${item.slug}-placeholder.svg`,
-  href: paths.industry(item.slug),
-}));
 
 // Marcas provisionales; relaciones y logotipos pendientes de confirmación.
-export const partners = [
-  {
-    "name": "COHERENT",
-    "logo": "/images/partners/coherent.svg",
-    "alt": "COHERENT"
-  },
-  {
-    "name": "IPG Photonics",
-    "logo": "/images/partners/ipg-photonics.svg",
-    "alt": "IPG Photonics"
-  },
-  {
-    "name": "SCANLAB",
-    "logo": "/images/partners/scanlab.svg",
-    "alt": "SCANLAB"
-  },
-  {
-    "name": "LASERLINE",
-    "logo": "/images/partners/laserline.svg",
-    "alt": "LASERLINE"
-  },
-  {
-    "name": "LUXINAR",
-    "logo": "/images/partners/luxinar.svg",
-    "alt": "LUXINAR"
-  },
-  {
-    "name": "BOFA",
-    "logo": "/images/partners/bofa.svg",
-    "alt": "BOFA"
-  },
-  {
-    "name": "laservision",
-    "logo": "/images/partners/laservision.svg",
-    "alt": "laservision"
-  },
-  {
-    "name": "MACKEN",
-    "logo": "/images/partners/macken.svg",
-    "alt": "MACKEN"
-  }
-];
+export { brands as partners } from './brandsData';
 
 export const accompaniment = [
   {
     icon: 'support',
-    title: 'Atención personalizada y consultoría',
+    title: 'Orientación para tu proyecto',
     description:
-      'Asesoría técnica y análisis de proyectos desde la primera llamada, con ingenieros dedicados a optimizar el rendimiento.',
+      'Material, geometría y objetivo de producción: tres puntos de partida para conversar sobre tu aplicación.',
   },
   {
     icon: 'training',
-    title: 'Capacitación técnica especializada',
+    title: 'Necesidades de capacitación',
     description:
-      'Transferencia profunda de conocimiento y mejores prácticas para operadores, técnicos de mantenimiento e ingenieros.',
+      'Identifica qué necesita conocer tu equipo para operar el proceso. El alcance de capacitación se debe acordar con XVR.',
   },
   {
     icon: 'bolt',
-    title: 'Soporte técnico y respuesta ágil',
+    title: 'Consulta de soporte técnico',
     description:
-      'Diagnóstico remoto y tiempos de respuesta ágiles en planta para resolución de incidencias con stock local de partes críticas.',
+      'Describe el equipo y la situación observada para consultar opciones de atención, sin anticipar tiempos ni disponibilidad.',
   },
   {
     icon: 'tool',
-    title: 'Reparación y mantenimiento',
+    title: 'Planificación del mantenimiento',
     description:
-      'Programas preventivos calibrados, alineación de haces, limpieza de óptica de precisión y verificación metrológica continua.',
+      'Reúne el historial del equipo y las recomendaciones del fabricante para definir qué atención conviene evaluar.',
   },
 ];
 
 export const companyHighlights = [
   {
     icon: 'check',
-    title: 'Ingeniería de aplicaciones in-house',
+    title: 'La aplicación como punto de partida',
     description:
-      'Desarrollo a la medida de recetas ópticas y parámetros optimizados para tus materiales.',
+      'Define qué pieza necesitas procesar y qué resultado esperas obtener.',
   },
   {
     icon: 'process',
-    title: 'Laboratorio de pruebas y factibilidad técnica en Querétaro',
+    title: 'Criterios para evaluar alternativas',
     description:
-      'Análisis metalúrgico, micrografías, ensayos de tracción y hermeticidad previos a la inversión.',
+      'Materiales, geometría y condiciones de uso ayudan a orientar la selección de tecnología.',
   },
   {
     icon: 'precision',
-    title: 'Soporte multirregional con base local',
+    title: 'Alcance acordado para cada proyecto',
     description:
-      'Ingenieros de servicio con capacidad de respuesta técnica inmediata en planta.',
+      'Los servicios, recursos y condiciones de atención deben confirmarse con XVR.',
   },
 ];
 

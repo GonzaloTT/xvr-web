@@ -1,22 +1,22 @@
 // Contenido editorial provisional. Confirmar canales y datos regionales con XVR.
 // No publicar teléfonos, correos, direcciones ni horarios sin confirmación.
 export const contactData = {
-  introduction: '911 XVR es el espacio para conversar sobre proyectos nuevos y necesidades de soporte de clientes existentes. Cuéntanos qué buscas desarrollar o qué situación necesitas revisar. Por ahora, el formulario es demostrativo: no envía ni guarda datos.',
+  introduction: 'Para un proyecto nuevo, describe la pieza, el material y el objetivo. Para una consulta de soporte, explica qué equipo utilizas y qué situación observas. Este formulario es una demostración: no envía solicitudes reales ni guarda datos.',
   direct: {
     title: 'Atención técnica y comercial',
-    description: 'Asesoría para una nueva aplicación o acompañamiento técnico para clientes existentes.',
-    pending: 'Teléfono y correo de contacto pendientes de confirmación.',
+    description: 'Una consulta útil empieza con el contexto: qué buscas fabricar, qué proceso utilizas o qué dificultad necesitas revisar.',
+    pending: 'Los canales directos se publicarán tras su validación con XVR. Esta página todavía no recibe solicitudes.',
   },
   regions: ['México', 'Estados Unidos', 'Costa Rica'].map(name => ({
     name,
-    description: 'Información de contacto regional pendiente de confirmación con XVR.',
+    description: `Para un proyecto en ${name}, indica dónde se realiza el proceso y el tipo de atención que necesitas evaluar.`,
   })),
   attention: {
     title: 'Coordinación de atención',
-    description: 'Indica el contexto de tu proyecto o necesidad de soporte y cómo prefieres que te contacten. Los canales y horarios de atención se confirmarán con XVR.',
+    description: 'Prepara una descripción del proyecto o incidencia y la ubicación del equipo. Cobertura, modalidad de atención y horarios requieren confirmación; la demostración no genera seguimiento.',
   },
   trust: [
-    { icon: 'process', eyebrow: '01 / PROCESOS LÁSER', title: 'Experiencia en procesos láser', description: 'Una perspectiva industrial para comprender la aplicación y sus necesidades de manufactura.' },
+    { icon: 'process', eyebrow: '01 / PROCESOS LÁSER', title: 'Contexto de la aplicación', description: 'Una perspectiva industrial para comprender la aplicación y sus necesidades de manufactura.' },
     { icon: 'training', eyebrow: '02 / DIÁLOGO TÉCNICO', title: 'Enfoque consultivo', description: 'El punto de partida es conocer el proceso, los materiales y los objetivos del proyecto.' },
     { icon: 'precision', eyebrow: '03 / INTEGRACIÓN', title: 'Integración de soluciones', description: 'Selección de tecnología y componentes considerando su papel dentro del proceso.' },
     { icon: 'support', eyebrow: '04 / ACOMPAÑAMIENTO', title: 'Acompañamiento del proyecto', description: 'Orientación a lo largo de la definición e integración de la solución.' },
@@ -32,5 +32,5 @@ export const contactFields = [
 export const projectOptions = ['Marcado láser', 'Soldadura láser', 'Corte y microprocesos', 'Tratamiento superficial', 'Accesorios y periféricos', 'Otra aplicación / Por definir'];
 export const contactDemo = {
   notice: 'Modo demostración: este formulario todavía no envía ni guarda información.',
-  result: 'Formulario de demostración. El envío se habilitará durante la integración final. No se ha enviado ni guardado información.',
+  result: 'Demostración completada. No se ha enviado ni guardado información y no se ha generado una solicitud de atención.',
 };

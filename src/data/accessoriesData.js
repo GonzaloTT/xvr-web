@@ -6,7 +6,7 @@ import { paths } from '../routes/paths';
 export const accessoriesPage = {
   hero: {
     eyebrow: 'ECOSISTEMA DE INTEGRACIÓN LÁSER',
-    title: 'Accesorios y periféricos para soluciones láser completas',
+    title: 'Productos y soluciones complementarias',
     description: 'Equipamiento para complementar, proteger y mantener los procesos de manufactura láser, seleccionado de acuerdo con las necesidades de cada instalación.',
     images: [
       { src: '/images/hero/accessories/integracion-placeholder.svg', label: 'Integración de periféricos' },
