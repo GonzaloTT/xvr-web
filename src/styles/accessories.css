@@ -106,3 +106,6 @@
   .accessory-card, .accessories-filters button { transition: none; }
   .accessory-card:hover, .accessory-card:has(:focus-visible) { transform: none; }
 }
+
+/* Keep the complete equipment scene visible in the published photo cards. */
+.accessories-page .accessory-card-image { aspect-ratio: 1672 / 941; object-fit: cover; object-position: center; }

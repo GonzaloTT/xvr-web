@@ -17,7 +17,7 @@ export default function Accessories() {
   return (
     <main id="contenido" className="accessories-page">
       <nav className="detail-breadcrumb" aria-label="Ruta de navegación"><div className="container"><Link to={paths.home}>← Inicio</Link><span aria-hidden="true">/</span><span aria-current="page">Productos</span></div></nav>
-      <HeroCarousel images={hero.images} className="accessories-hero" ariaLabel={hero.title}>
+      <HeroCarousel images={hero.images} className="accessories-hero photo-hero" ariaLabel={hero.title}>
         <div className="hero-copy">
           <span className="hero-eyebrow">{hero.eyebrow}</span>
           <h1>{hero.title}</h1>

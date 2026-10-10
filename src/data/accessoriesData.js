@@ -9,8 +9,8 @@ export const accessoriesPage = {
     title: 'Productos y soluciones complementarias',
     description: 'Equipamiento para complementar, proteger y mantener los procesos de manufactura láser, seleccionado de acuerdo con las necesidades de cada instalación.',
     images: [
-      { src: '/images/hero/accessories/integracion-placeholder.svg', label: 'Integración de periféricos' },
-      { src: '/images/hero/accessories/equipamiento-placeholder.svg', label: 'Equipamiento industrial' },
+      { src: '/images/hero/products/Hero-Productos-01.png', label: 'Integración de periféricos' },
+      { src: '/images/hero/products/Hero-Productos-02.png', label: 'Equipamiento industrial' },
     ],
   },
   integration: {
@@ -72,7 +72,7 @@ export const accessories = [
   {
     id: 'extraccion-filtracion', catalogType: 'product', category: 'extraction', eyebrow: 'CAT-02 / GESTIÓN AMBIENTAL',
     title: 'Extracción y Filtración de Humos Industriales',
-    image: '/images/accessories/extraction/filtracion-humos-placeholder.svg', alt: '',
+    image: '/images/products/Producto-01.png', alt: '',
     description: 'Equipos de captación y filtración para gestionar las emisiones del proceso, considerando el material trabajado y las condiciones del área de operación.',
     highlights: [
       { title: 'Captación en el proceso', description: 'Revisión de puntos de extracción y conexiones a la estación.' },
@@ -85,7 +85,7 @@ export const accessories = [
   {
     id: 'medicion-optica', catalogType: 'product', category: 'measurement', eyebrow: 'CAT-03 / METROLOGÍA Y CONTROL',
     title: 'Medición de Potencia, Perfil de Haz y Calibración',
-    image: '/images/accessories/measurement/medicion-haz-placeholder.svg', alt: '',
+    image: '/images/products/Producto-02.png', alt: '',
     description: 'Instrumentos para observar y evaluar características del haz. Su selección depende de la fuente, la configuración óptica y las necesidades de medición.',
     highlights: [
       { title: 'Perfil de haz', description: 'Herramientas para examinar la distribución del haz en la aplicación.' },
@@ -98,7 +98,7 @@ export const accessories = [
   {
     id: 'enfriamiento-industrial', catalogType: 'product', category: 'cooling', eyebrow: 'CAT-04 / TERMORREGULACIÓN',
     title: 'Enfriamiento y Termorregulación (Chillers)',
-    image: '/images/accessories/cooling/chiller-industrial-placeholder.svg', alt: '',
+    image: '/images/products/Producto-03.png', alt: '',
     description: 'Sistemas de enfriamiento para acompañar la operación de fuentes y componentes láser, seleccionados a partir de sus requisitos térmicos y de instalación.',
     highlights: [
       { title: 'Control de temperatura', description: 'Configuración de la termorregulación según las necesidades del equipo.' },

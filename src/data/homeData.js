@@ -3,6 +3,8 @@ import { paths } from '../routes/paths';
 // Editorial copy transcribed from the supplied reference. Technical figures,
 // certifications, phone, legal identity and service guarantees require approval.
 
+export const aboutImage = '/images/about/Nosotros.png';
+
 export const heroSlides = [
   {
     "src": "/images/hero/home/Home-Hero-01.png",
