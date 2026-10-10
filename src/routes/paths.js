@@ -15,7 +15,7 @@ export const navigation = [
     to: paths.home,
   },
   {
-    label: 'Soluciones',
+    label: 'Procesos Láser',
     to: paths.solutions,
   },
   {
@@ -24,7 +24,7 @@ export const navigation = [
   },
   {
     label: 'Industrias',
-    to: '/#industrias',
+    to: paths.industries,
   },
   {
     label: 'Nosotros',

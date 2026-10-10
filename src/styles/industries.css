@@ -1,0 +1,35 @@
+/* Scoped editorial layouts; cards reuse the shared grid and interaction styles. */
+.industry-editorial { max-width: 820px; margin-bottom: 28px; }
+
+.industry-editorial-note { margin-block: 24px; max-width: 900px; font-size: 13px; }
+.industry-detail-heading { display: grid; grid-template-columns: 1.4fr 1fr; gap: 32px; align-items: center; margin-top: 28px; }
+.industry-detail-heading > * { min-width: 0; }
+.industry-detail-heading img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: var(--radius-md); }
+.industry-blocks { display: grid; gap: 24px; }
+.industry-block { padding: 28px; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-md); }
+.industry-block h2 { font-size: 26px; margin-bottom: 20px; }
+.industry-topics { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px; }
+.industry-topics p { margin-top: 8px; }
+@media (max-width: 1100px) {
+  .industry-detail-heading { grid-template-columns: 1fr; }
+  .industry-detail-heading img { max-width: 600px; aspect-ratio: 2 / 1; }
+}
+@media (max-width: 700px) {
+  .industry-topics { grid-template-columns: 1fr; gap: 20px; }
+  .industry-block { padding: 20px; }
+  .industry-block h2 { font-size: 24px; }
+}
+
+/* Editorial industry listing; Home cards and detail layouts remain independent. */
+.industry-portfolio .portfolio-image { min-height: 400px; }
+.industry-application-list { padding-left: 20px; margin: 0 0 24px; color: var(--text); }
+.industry-application-list li + li { margin-top: 8px; }
+@media (min-width: 701px) {
+  .industry-portfolio:nth-child(even) { grid-template-columns: 7fr 5fr; }
+  .industry-portfolio:nth-child(even) .portfolio-image { grid-column: 2; grid-row: 1; }
+  .industry-portfolio:nth-child(even) .portfolio-content { grid-column: 1; grid-row: 1; }
+}
+@media (max-width: 700px) {
+  .industry-portfolio .portfolio-image { min-height: 0; }
+  .industry-portfolio .portfolio-image img { aspect-ratio: 1.6; }
+}
