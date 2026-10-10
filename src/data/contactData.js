@@ -1,6 +1,7 @@
 // Contenido editorial provisional. Confirmar canales y datos regionales con XVR.
 // No publicar teléfonos, correos, direcciones ni horarios sin confirmación.
 export const contactData = {
+  heroImage: '/images/hero/contact/911-XVR.png',
   introduction: 'Para un proyecto nuevo, describe la pieza, el material y el objetivo. Para una consulta de soporte, explica qué equipo utilizas y qué situación observas. Este formulario es una demostración: no envía solicitudes reales ni guarda datos.',
   direct: {
     title: 'Atención técnica y comercial',

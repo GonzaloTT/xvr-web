@@ -73,3 +73,15 @@
   .contact-direct h2 { font-size: 25px; }
   .contact-submit { width: 100%; }
 }
+
+/* A static photograph; form and regional content remain independent. */
+.contact-introduction { position: relative; isolation: isolate; min-height: 520px; display: flex; align-items: center; padding-block: 64px; }
+.contact-hero-image { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; z-index: -2; }
+.contact-introduction::before { content: ''; position: absolute; inset: 0; z-index: -1; background: linear-gradient(90deg, rgba(14,29,48,.96), rgba(14,29,48,.85) 35%, transparent 78%); }
+.contact-introduction-copy { color: #eef3f8; }
+.contact-introduction .contact-direct { background: rgba(32,50,71,.94); }
+@media (max-width: 700px) {
+  .contact-introduction { min-height: 0; padding-block: 210px 32px; }
+  .contact-hero-image { height: 270px; }
+  .contact-introduction::before { background: linear-gradient(180deg, transparent 130px, var(--navy) 265px); }
+}

@@ -1,3 +1,4 @@
+import '../../styles/photo-hero.css';
 import { assetUrl } from '../../utils/assetUrl';
 import { useEffect, useState } from 'react';
 export default function HeroCarousel({ images = [], interval = 6500, className = '', ariaLabel = 'Soluciones láser industriales', children }) {

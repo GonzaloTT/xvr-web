@@ -10,7 +10,7 @@ import '../../styles/solutions.css';
 export default function Solutions() {
   return (
     <main id="contenido" className="solutions-page">
-      <HeroCarousel images={solutionsOverview.heroImages} className="solutions-hero" ariaLabel="Procesos láser para manufactura">
+      <HeroCarousel images={solutionsOverview.heroImages} className="solutions-hero photo-hero" ariaLabel="Procesos láser para manufactura">
         <div className="hero-copy">
           <span className="hero-eyebrow">{solutionsOverview.eyebrow}</span>
           <h1>{solutionsOverview.title}</h1>

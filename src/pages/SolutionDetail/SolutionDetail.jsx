@@ -13,7 +13,7 @@ export default function SolutionDetail({ solution }) {
         <span aria-hidden="true">/</span><span aria-current="page">{solution.category}</span>
       </div>
     </nav>
-    <HeroCarousel key={solution.slug} images={solution.heroImages} className="solution-detail-hero" ariaLabel={solution.title}>
+    <HeroCarousel key={solution.slug} images={solution.heroImages} className="solution-detail-hero photo-hero" ariaLabel={solution.title}>
       <div className="hero-copy">
         <span className="hero-eyebrow">{solution.eyebrow}</span>
         <h1>{solution.title}</h1><p>{solution.description}</p>

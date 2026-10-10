@@ -1,3 +1,4 @@
+import { assetUrl } from '../../utils/assetUrl';
 import ContactForm from '../../components/ContactForm/ContactForm';
 import Icon from '../../components/Icon';
 import { contactData } from '../../data/contactData';
@@ -7,6 +8,7 @@ export default function Contact() {
   return (
     <main id="contenido" className="contact-page">
       <section className="contact-introduction" aria-labelledby="contact-title">
+        <img className="contact-hero-image" src={assetUrl(contactData.heroImage)} alt="" fetchPriority="high" />
         <div className="container contact-layout">
           <div>
             <span className="eyebrow">911 XVR · ASESORÍA Y SOPORTE</span>

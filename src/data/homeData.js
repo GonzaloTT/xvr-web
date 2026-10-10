@@ -5,36 +5,44 @@ import { paths } from '../routes/paths';
 
 export const heroSlides = [
   {
-    "src": "/images/hero/home-problemas-placeholder.svg",
+    "src": "/images/hero/home/Home-Hero-01.png",
     "label": "Problemas industriales",
     "title": "Tu reto de producción, nuestro punto de partida",
     "description": "Cuéntanos qué necesitas mejorar en tu proceso para explorar una solución adecuada."
   },
   {
-    "src": "/images/hero/home-aplicaciones-placeholder.svg",
+    "src": "/images/hero/home/Home-Hero-02.png",
     "label": "Aplicaciones industriales",
     "title": "Tecnología para lo que tu industria necesita",
     "description": "Exploremos aplicaciones de identificación, unión y procesamiento de componentes."
   },
   {
-    "src": "/images/hero/home-manufactura-laser-placeholder.svg",
+    "src": "/images/hero/home/Home-Hero-03.png",
     "label": "Manufactura con láser",
     "title": "Encuentra el lugar del láser en tu manufactura",
     "description": "Conoce opciones de marcado, soldadura, corte y tratamiento superficial para tu proyecto."
   },
   {
-    "src": "/images/hero/home-capacidad-tecnica-placeholder.svg",
+    "src": "/images/hero/home/Home-Hero-04.png",
     "label": "Capacidad técnica y experiencia",
     "title": "Criterio técnico para decidir el siguiente paso",
     "description": "Conversemos sobre materiales, proceso e integración para orientar tu proyecto."
   },
   {
-    "src": "/images/hero/home-partners-placeholder.svg",
+    "src": "/images/hero/home/Home-Hero-05.png",
     "label": "Marcas y partners tecnológicos",
     "title": "La tecnología adecuada empieza con una buena selección",
     "description": "Revisemos opciones de fabricantes y componentes según las necesidades de tu aplicación."
   }
 ];
+
+// First image batch: Home cards only; interior industry images stay independent.
+export const homeIndustryImages = {
+  automotriz: '/images/hero/industrias/Industrias-Automotriz.png',
+  medica: '/images/hero/industrias/Industrias-Medicos.png',
+  electronica: '/images/hero/industrias/Industrias-Electronica.png',
+  aeronautica: '/images/hero/industrias/Industrias-Aereonautica.png',
+};
 
 export const solutions = [
   {

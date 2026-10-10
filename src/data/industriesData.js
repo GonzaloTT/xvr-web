@@ -1,4 +1,5 @@
 import { paths } from '../routes/paths';
+import { homeIndustryImages } from './homeData';
 
 // Contenido editorial provisional: no acredita capacidades, servicios ni equipamiento de XVR.
 export const industryEditorial = {
@@ -34,7 +35,7 @@ const industrySummaries = [
   }
 ].map(item => ({
   ...item,
-  image: `/images/industries/${item.slug}-placeholder.svg`,
+  image: homeIndustryImages[item.slug],
   href: paths.industry(item.slug),
 }));
 

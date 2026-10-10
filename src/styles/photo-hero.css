@@ -1,0 +1,19 @@
+/* Opt-in photographic heroes; other components keep their own treatments. */
+.hero.photo-hero .hero-copy { max-width: 540px; width: 47%; }
+.hero.photo-hero .hero-copy p { color: #eef3f8; }
+.hero.photo-hero .hero-shade { background: linear-gradient(90deg, rgba(14,29,48,.97) 0%, rgba(14,29,48,.91) 30%, rgba(14,29,48,.55) 47%, transparent 72%); }
+.hero.photo-hero .hero-slide { object-position: 60% center; }
+.hero.photo-hero .hero-controls { filter: drop-shadow(0 1px 3px #0e1d30); }
+@media (max-width: 1100px) {
+  .hero.photo-hero .hero-copy { width: 56%; }
+  .hero.photo-hero .hero-shade { background: linear-gradient(90deg, rgba(14,29,48,.97), rgba(14,29,48,.88) 38%, transparent 90%); }
+}
+@media (max-width: 700px) {
+  body .hero.photo-hero { min-height: 0; padding-block: 200px 72px; }
+  .hero.photo-hero .hero-copy { width: 100%; max-width: none; }
+  .hero.photo-hero .hero-slides { height: 260px; }
+  .hero.photo-hero .hero-slide { object-position: center; }
+  .hero.photo-hero .hero-shade { background: linear-gradient(180deg, transparent 130px, var(--navy) 255px); }
+}
+
+.hero.photo-hero .hero-controls > [role="group"] { background: rgba(14,29,48,.88); border-radius: var(--radius); padding-inline: 6px; }
