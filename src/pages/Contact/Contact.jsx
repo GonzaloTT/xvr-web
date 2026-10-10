@@ -9,13 +9,13 @@ export default function Contact() {
       <section className="contact-introduction" aria-labelledby="contact-title">
         <div className="container contact-layout">
           <div>
-            <span className="eyebrow">CONTACTO · INGENIERÍA Y APLICACIONES</span>
-            <h1 id="contact-title">Hablemos de tu proceso</h1>
+            <span className="eyebrow">911 XVR · ASESORÍA Y SOPORTE</span>
+            <h1 id="contact-title">911 XVR: proyectos y soporte</h1>
             <p className="contact-introduction-copy">{contactData.introduction}</p>
             <div className="contact-intro-notes">
               <div><span>APLICACIÓN</span><strong>Comparte tu necesidad</strong></div>
               <div><span>CONTEXTO</span><strong>Describe tu proceso</strong></div>
-              <div><span>PROYECTO</span><strong>Cuéntanos tu objetivo</strong></div>
+              <div><span>PROYECTO O SOPORTE</span><strong>Cuéntanos tu objetivo</strong></div>
             </div>
           </div>
           <aside className="contact-direct" aria-labelledby="contact-direct-title">
@@ -27,7 +27,7 @@ export default function Contact() {
         </div>
       </section>
 
-      <section className="contact-registration" aria-label="Registro del proyecto y presencia regional">
+      <section className="contact-registration" aria-label="Consulta y presencia regional">
         <div className="container contact-layout">
           <ContactForm />
           <div className="contact-sidebar">

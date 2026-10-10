@@ -5,48 +5,35 @@ import { paths } from '../routes/paths';
 
 export const heroSlides = [
   {
-    src: '/images/hero/proceso-laser-placeholder.svg',
-    label: 'Proceso láser',
+    "src": "/images/hero/home-problemas-placeholder.svg",
+    "label": "Problemas industriales",
+    "title": "Tu reto de producción, nuestro punto de partida",
+    "description": "Cuéntanos qué necesitas mejorar en tu proceso para explorar una solución adecuada."
   },
   {
-    src: '/images/hero/integracion-placeholder.svg',
-    label: 'Integración industrial',
+    "src": "/images/hero/home-aplicaciones-placeholder.svg",
+    "label": "Aplicaciones industriales",
+    "title": "Tecnología para lo que tu industria necesita",
+    "description": "Exploremos aplicaciones de identificación, unión y procesamiento de componentes."
   },
   {
-    src: '/images/hero/manufactura-placeholder.svg',
-    label: 'Manufactura de precisión',
-  },
-];
-
-export const valuePillars = [
-  {
-    icon: 'process',
-    title: 'Definición de Proceso',
-    description:
-      'Validación de parámetros y factibilidad metalúrgica previa.',
-    caption: 'LABORATORIO IN-HOUSE',
+    "src": "/images/hero/home-manufactura-laser-placeholder.svg",
+    "label": "Manufactura con láser",
+    "title": "Encuentra el lugar del láser en tu manufactura",
+    "description": "Conoce opciones de marcado, soldadura, corte y tratamiento superficial para tu proyecto."
   },
   {
-    icon: 'precision',
-    title: 'Integración de Precisión',
-    description:
-      'Sistemas láser, óptica, automatización y seguridad integrados.',
-    caption: 'INTEGRACIÓN DE SISTEMAS',
+    "src": "/images/hero/home-capacidad-tecnica-placeholder.svg",
+    "label": "Capacidad técnica y experiencia",
+    "title": "Criterio técnico para decidir el siguiente paso",
+    "description": "Conversemos sobre materiales, proceso e integración para orientar tu proyecto."
   },
   {
-    icon: 'training',
-    title: 'Acompañamiento en Planta',
-    description:
-      'Puesta a punto, calibración y capacitación operativa in situ.',
-    caption: 'PUESTA EN MARCHA',
-  },
-  {
-    icon: 'support',
-    title: 'Soporte y Continuidad',
-    description:
-      'Disponibilidad de consumibles, refacciones y asistencia técnica local.',
-    caption: 'CONTINUIDAD OPERATIVA',
-  },
+    "src": "/images/hero/home-partners-placeholder.svg",
+    "label": "Marcas y partners tecnológicos",
+    "title": "La tecnología adecuada empieza con una buena selección",
+    "description": "Revisemos opciones de fabricantes y componentes según las necesidades de tu aplicación."
+  }
 ];
 
 export const solutions = [
@@ -82,52 +69,78 @@ export const solutions = [
 
 export const industries = [
   {
-    slug: 'automotriz',
-    icon: 'car',
-    title: 'Automotriz & E-Mobility',
-    description:
-      'Trazabilidad de componentes críticos, soldadura de celdas de batería y texturizado de superficies para ensamble estructural.',
+    "slug": "automotriz",
+    "icon": "car",
+    "title": "Automotriz y E-Mobility",
+    "description": "Identificación y unión de componentes para vehículos y baterías."
   },
   {
-    slug: 'medica',
-    icon: 'medical',
-    title: 'Dispositivos Médicos',
-    description:
-      'Marcado microscópico anticorrosión, soldadura de instrumental quirúrgico e implantes cumpliendo normativas sanitarias.',
+    "slug": "medica",
+    "icon": "medical",
+    "title": "Dispositivos Médicos",
+    "description": "Marcado y ensamble de instrumental y componentes médicos."
   },
   {
-    slug: 'electronica',
-    icon: 'chip',
-    title: 'Electrónica & Semiconductores',
-    description:
-      'Microsoldadura de circuitos, desaislado láser y marcado de microchips sin inducción electrostática.',
+    "slug": "electronica",
+    "icon": "chip",
+    "title": "Electrónica y Semiconductores",
+    "description": "Identificación y procesamiento de pequeños componentes electrónicos."
   },
   {
-    slug: 'aeronautica',
-    icon: 'plane',
-    title: 'Aeronáutica & Defensa',
-    description:
-      'Mecanizado de superaleaciones, perforación de orificios de enfriamiento en álabes y trazabilidad bajo estándares aeroespaciales.',
-  },
-].map((item) => ({
+    "slug": "aeronautica",
+    "icon": "plane",
+    "title": "Aeronáutica y Defensa",
+    "description": "Identificación y trabajo de superficies en componentes aeronáuticos y de defensa."
+  }
+].map(item => ({
   ...item,
   image: `/images/industries/${item.slug}-placeholder.svg`,
+  href: paths.industry(item.slug),
 }));
 
+// Marcas provisionales; relaciones y logotipos pendientes de confirmación.
 export const partners = [
-  'COHERENT',
-  'IPG Photonics',
-  'SCANLAB',
-  'LASERLINE',
-  'LUXINAR',
-  'BOFA',
-  'laservision',
-  'MACKEN',
-].map((name) => ({
-  name,
-  logo: null,
-  alt: name,
-}));
+  {
+    "name": "COHERENT",
+    "logo": "/images/partners/coherent.svg",
+    "alt": "COHERENT"
+  },
+  {
+    "name": "IPG Photonics",
+    "logo": "/images/partners/ipg-photonics.svg",
+    "alt": "IPG Photonics"
+  },
+  {
+    "name": "SCANLAB",
+    "logo": "/images/partners/scanlab.svg",
+    "alt": "SCANLAB"
+  },
+  {
+    "name": "LASERLINE",
+    "logo": "/images/partners/laserline.svg",
+    "alt": "LASERLINE"
+  },
+  {
+    "name": "LUXINAR",
+    "logo": "/images/partners/luxinar.svg",
+    "alt": "LUXINAR"
+  },
+  {
+    "name": "BOFA",
+    "logo": "/images/partners/bofa.svg",
+    "alt": "BOFA"
+  },
+  {
+    "name": "laservision",
+    "logo": "/images/partners/laservision.svg",
+    "alt": "laservision"
+  },
+  {
+    "name": "MACKEN",
+    "logo": "/images/partners/macken.svg",
+    "alt": "MACKEN"
+  }
+];
 
 export const accompaniment = [
   {

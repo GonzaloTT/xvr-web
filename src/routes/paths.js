@@ -1,6 +1,8 @@
 export const paths = {
   home: '/',
   solutions: '/soluciones',
+  industries: '/soluciones-industria',
+  industry: (slug) => `/soluciones-industria/${slug}`,
   accessories: '/accesorios-perifericos',
   blog: '/blog',
   contact: '/contacto',
@@ -33,7 +35,7 @@ export const navigation = [
     to: paths.blog,
   },
   {
-    label: 'Contacto',
+    label: '911 XVR',
     to: paths.contact,
   },
 ];

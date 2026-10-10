@@ -1,10 +1,10 @@
 // Contenido editorial provisional. Confirmar canales y datos regionales con XVR.
 // No publicar teléfonos, correos, direcciones ni horarios sin confirmación.
 export const contactData = {
-  introduction: 'Comparte tu aplicación, el proceso que deseas mejorar o la necesidad de tu empresa. Esta información ayudará a XVR a entender el proyecto y orientar los siguientes pasos.',
+  introduction: '911 XVR es el espacio para conversar sobre proyectos nuevos y necesidades de soporte de clientes existentes. Cuéntanos qué buscas desarrollar o qué situación necesitas revisar. Por ahora, el formulario es demostrativo: no envía ni guarda datos.',
   direct: {
     title: 'Atención técnica y comercial',
-    description: 'Cuéntanos sobre tu aplicación y nuestro equipo podrá orientarte sobre los siguientes pasos.',
+    description: 'Asesoría para una nueva aplicación o acompañamiento técnico para clientes existentes.',
     pending: 'Teléfono y correo de contacto pendientes de confirmación.',
   },
   regions: ['México', 'Estados Unidos', 'Costa Rica'].map(name => ({
@@ -13,7 +13,7 @@ export const contactData = {
   })),
   attention: {
     title: 'Coordinación de atención',
-    description: 'Indica el contexto de tu proyecto y cómo prefieres que te contacten. Los canales y horarios de atención se confirmarán con XVR.',
+    description: 'Indica el contexto de tu proyecto o necesidad de soporte y cómo prefieres que te contacten. Los canales y horarios de atención se confirmarán con XVR.',
   },
   trust: [
     { icon: 'process', eyebrow: '01 / PROCESOS LÁSER', title: 'Experiencia en procesos láser', description: 'Una perspectiva industrial para comprender la aplicación y sus necesidades de manufactura.' },

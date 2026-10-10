@@ -9,17 +9,20 @@ import Accessories from './pages/Accessories/Accessories';
 import Contact from './pages/Contact/Contact';
 import { solutionDetails } from './data/solutionsData';
 import { paths } from './routes/paths';
+import { industries } from './data/homeData';
 
 function ScrollToLocation() {
   const { pathname, hash, key } = useLocation();
   useEffect(() => {
     const detail = Object.values(solutionDetails).find(solution => paths.solution(solution.slug) === pathname);
-    const title = detail?.title || ({
+    const industry = industries.find(item => item.href === pathname);
+    const title = detail?.title || industry?.title || ({
       [paths.home]: 'Inicio',
       [paths.solutions]: 'Soluciones Láser',
       [paths.blog]: 'Blog — Próximamente',
       [paths.accessories]: 'Accesorios y Periféricos',
-      [paths.contact]: 'Contacto',
+      [paths.contact]: '911 XVR',
+      [paths.industries]: 'Soluciones por industria',
     })[pathname] || 'XVR';
     document.title = `${title} | XVR Soluciones Láser Industriales`;
   }, [pathname]);
@@ -30,8 +33,8 @@ function ScrollToLocation() {
   return null;
 }
 // Only a shared route boundary; future pages are intentionally not implemented.
-function PendingRoute({ unknown = false }) {
-  return <main id="contenido" className="container pending-route"><span className="eyebrow">XVR</span><h1>{unknown ? 'Página no encontrada' : 'Contenido disponible próximamente'}</h1><p>{unknown ? 'La dirección solicitada no existe.' : 'Esta sección está reservada para una próxima fase del sitio.'}</p><Link className="button" to="/">Volver al inicio <span aria-hidden="true">→</span></Link></main>;
+function PendingRoute({ unknown = false, title }) {
+  return <main id="contenido" className="container pending-route"><span className="eyebrow">XVR</span><h1>{unknown ? 'Página no encontrada' : title || 'Contenido disponible próximamente'}</h1><p>{unknown ? 'La dirección solicitada no existe.' : 'Esta sección está reservada para una próxima fase del sitio.'}</p><Link className="button" to="/">Volver al inicio <span aria-hidden="true">→</span></Link></main>;
 }
 export default function App() {
   const location = useLocation();
@@ -45,6 +48,10 @@ export default function App() {
         <Route path={paths.solutions} element={<Solutions />} />
         <Route path={paths.accessories} element={<Accessories />} />
         <Route path={paths.contact} element={<Contact />} />
+        <Route path={paths.industries} element={<PendingRoute title="Soluciones por industria" />} />
+        {industries.map(industry => (
+          <Route key={industry.slug} path={industry.href} element={<PendingRoute title={industry.title} />} />
+        ))}
         {Object.values(solutionDetails).map(solution => (
           <Route key={solution.slug} path={paths.solution(solution.slug)} element={<SolutionDetail solution={solution} />} />
         ))}
