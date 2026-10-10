@@ -21,6 +21,9 @@ import SparePartDetail from './pages/SpareParts/SparePartDetail';
 import { brands } from './data/brandsData';
 import { products } from './data/productsData';
 import { spareParts } from './data/sparePartsData';
+import Blog from './pages/Blog/Blog';
+import BlogDetail from './pages/Blog/BlogDetail';
+import { blogArticles } from './data/blogData';
 
 function ScrollToLocation() {
   const { pathname, hash, key } = useLocation();
@@ -30,10 +33,11 @@ function ScrollToLocation() {
     const catalogRecord = brands.find(item => paths.brand(item.slug) === pathname)
       || products.find(item => paths.product(item.slug) === pathname)
       || spareParts.find(item => paths.sparePart(item.slug) === pathname);
-    const title = catalogRecord?.name || detail?.title || industry?.title || ({
+    const article = blogArticles.find(item => paths.article(item.slug) === pathname);
+    const title = article?.title || catalogRecord?.name || detail?.title || industry?.title || ({
       [paths.home]: 'Inicio',
       [paths.solutions]: 'Soluciones Láser',
-      [paths.blog]: 'Universo Láser — Próximamente',
+      [paths.blog]: 'Universo Láser',
       [paths.brands]: 'Nuestras Marcas',
       [paths.products]: 'Productos',
       [paths.spareParts]: 'Refacciones',
@@ -79,9 +83,11 @@ export default function App() {
         {Object.values(solutionDetails).map(solution => (
           <Route key={solution.slug} path={paths.solution(solution.slug)} element={<SolutionDetail solution={solution} />} />
         ))}
-        {[`${paths.solutions}/:slug`, paths.blog].map(path => (
+        {[`${paths.solutions}/:slug`].map(path => (
           <Route key={path} path={path} element={<PendingRoute />} />
         ))}
+        <Route path={paths.blog} element={<Blog />} />
+        <Route path={paths.article(':slug')} element={<BlogDetail />} />
         <Route path="*" element={<PendingRoute unknown />} />
       </Routes>
       <Footer />

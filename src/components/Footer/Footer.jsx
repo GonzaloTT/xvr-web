@@ -7,5 +7,5 @@ export default function Footer() {
     ['Soluciones por industria', paths.industries], ['Productos', paths.products],
     ['Nuestras Marcas', paths.brands],
     ['Refacciones', paths.spareParts], ['Universo Láser', paths.blog], ['911 XVR', paths.contact],
-  ].map(([label, href]) => <li key={href}><Link to={href}>{label}</Link></li>)}</ul></div><div><h2>Contacto directo & ubicación</h2><strong>Laboratorio Querétaro</strong><Link className="footer-contact" to={paths.contact}>Hablar con un especialista →</Link><strong>Cobertura Operativa</strong><p>{company.regions}</p><strong>Servicio</strong><p>Soporte técnico especializado</p></div></div><div className="footer-bottom"><div className="container">© {new Date().getFullYear()} XVR</div></div></footer>;
+  ].map(([label, href]) => <li key={href}><Link to={href}>{label}</Link></li>)}</ul></div><div><h2>Contacto directo & ubicación</h2><strong>Laboratorio Querétaro</strong><Link className="footer-contact" to={paths.contact}>Hablar con un especialista →</Link><strong>Cobertura Operativa</strong><p>{company.regions}</p><strong>Servicio</strong><p>Soporte técnico especializado</p></div></div></footer>;
 }

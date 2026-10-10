@@ -25,7 +25,7 @@ export const accessoriesPage = {
   },
   catalog: {
     eyebrow: 'CATÁLOGO INDUSTRIAL ESPECIALIZADO',
-    title: 'Equipamiento Periférico por Categoría Operativa',
+    title: 'Productos y refacciones para tu aplicación',
   },
   advantages: {
     eyebrow: 'VENTAJA OPERATIVA XVR',
@@ -55,8 +55,9 @@ export const accessoryCategories = [
 ];
 
 export const accessories = [
+  // A mixed family of equipment and components; do not infer replacement parts.
   {
-    id: 'seguridad-laser', category: 'safety', eyebrow: 'CAT-01 / SEGURIDAD INDUSTRIAL',
+    id: 'seguridad-laser', catalogType: null, category: 'safety', eyebrow: 'CAT-01 / SEGURIDAD INDUSTRIAL',
     title: 'Seguridad Láser y Protección Radiológica',
     image: '/images/accessories/safety/proteccion-laser-placeholder.svg', alt: '',
     description: 'Elementos de protección y contención que se seleccionan según el sistema láser, el entorno de trabajo y la evaluación de riesgos de la instalación.',
@@ -69,7 +70,7 @@ export const accessories = [
     cta: { label: 'Consultar equipamiento', href: paths.contact },
   },
   {
-    id: 'extraccion-filtracion', category: 'extraction', eyebrow: 'CAT-02 / GESTIÓN AMBIENTAL',
+    id: 'extraccion-filtracion', catalogType: 'product', category: 'extraction', eyebrow: 'CAT-02 / GESTIÓN AMBIENTAL',
     title: 'Extracción y Filtración de Humos Industriales',
     image: '/images/accessories/extraction/filtracion-humos-placeholder.svg', alt: '',
     description: 'Equipos de captación y filtración para gestionar las emisiones del proceso, considerando el material trabajado y las condiciones del área de operación.',
@@ -82,7 +83,7 @@ export const accessories = [
     cta: { label: 'Consultar equipamiento', href: paths.contact },
   },
   {
-    id: 'medicion-optica', category: 'measurement', eyebrow: 'CAT-03 / METROLOGÍA Y CONTROL',
+    id: 'medicion-optica', catalogType: 'product', category: 'measurement', eyebrow: 'CAT-03 / METROLOGÍA Y CONTROL',
     title: 'Medición de Potencia, Perfil de Haz y Calibración',
     image: '/images/accessories/measurement/medicion-haz-placeholder.svg', alt: '',
     description: 'Instrumentos para observar y evaluar características del haz. Su selección depende de la fuente, la configuración óptica y las necesidades de medición.',
@@ -95,7 +96,7 @@ export const accessories = [
     cta: { label: 'Consultar equipamiento', href: paths.contact },
   },
   {
-    id: 'enfriamiento-industrial', category: 'cooling', eyebrow: 'CAT-04 / TERMORREGULACIÓN',
+    id: 'enfriamiento-industrial', catalogType: 'product', category: 'cooling', eyebrow: 'CAT-04 / TERMORREGULACIÓN',
     title: 'Enfriamiento y Termorregulación (Chillers)',
     image: '/images/accessories/cooling/chiller-industrial-placeholder.svg', alt: '',
     description: 'Sistemas de enfriamiento para acompañar la operación de fuentes y componentes láser, seleccionados a partir de sus requisitos térmicos y de instalación.',

@@ -34,7 +34,7 @@
 .accessories-filters button:hover { background: var(--border); border-color: var(--card-hover-border); }
 .accessories-filters button[aria-pressed="true"] { background: var(--navy); color: var(--white); }
 .accessories-filters button:focus-visible { outline: 3px solid var(--blue); outline-offset: 3px; }
-.accessories-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--grid-gap); align-items: stretch; animation: accessories-reveal var(--interaction-duration) ease; }
+.accessories-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--grid-gap); align-items: stretch; animation: accessories-reveal var(--interaction-duration) ease; }
 @keyframes accessories-reveal { from { opacity: .4; } to { opacity: 1; } }
 .accessory-card {
   display: flex; flex-direction: column; min-width: 0;
@@ -70,6 +70,7 @@
 .accessories-cta .button { background: var(--sky); color: var(--navy); }
 .accessories-cta .button:hover { background: var(--white); }
 @media (max-width: 1100px) {
+  .accessories-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .accessories-page { --accessories-section-space: 64px; }
   .accessories-integration-heading { grid-template-columns: 1fr; gap: 16px; }
   .accessories-integration-heading h2 { font-size: 30px; }
