@@ -13,8 +13,9 @@ export default function Blog() {
       <img src={assetUrl(article.image)} alt="Ilustración provisional del tema" width="600" height="375" loading="lazy"/>
       <div className="solution-body">
         <h2>{article.title}</h2>
+        <small>Contenido en preparación</small>
         <p>{article.description}</p>
-        <Link to={paths.article(article.slug)} aria-label={'Leer artículo: ' + article.title}>Leer artículo <span aria-hidden="true">→</span></Link>
+        <Link to={paths.article(article.slug)} aria-label={'Ver tema: ' + article.title}>Ver tema <span aria-hidden="true">→</span></Link>
       </div>
     </article>)}</div>
   </main>;
