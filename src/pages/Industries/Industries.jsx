@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { industries, industryEditorial } from '../../data/industriesData';
-import { assetUrl } from '../../utils/assetUrl';
+import { photoImage } from '../../utils/photoImage';
 import '../../styles/solutions.css';
 import '../../styles/industries.css';
 
@@ -12,7 +12,7 @@ export default function Industries() {
     <div className="portfolio-section">
       <div className="container portfolio-list">
         {industries.map((industry, index) => <section key={industry.slug} className="portfolio-solution industry-portfolio" aria-labelledby={`${industry.slug}-title`}>
-          <div className="portfolio-image"><img src={assetUrl(industry.image)} alt={`Imagen provisional de ${industry.title}`} loading="lazy" width="600" height="480"/><span>INDUSTRIA {String(index + 1).padStart(2, '0')}</span></div>
+          <div className="portfolio-image"><img {...photoImage(industry.image, '(max-width: 900px) 100vw, 600px')} alt={`Imagen provisional de ${industry.title}`} loading="lazy" width="600" height="480"/><span>INDUSTRIA {String(index + 1).padStart(2, '0')}</span></div>
           <div className="portfolio-content">
             <h2 id={`${industry.slug}-title`}>{industry.title}</h2>
             <p>{industry.introduction}</p>

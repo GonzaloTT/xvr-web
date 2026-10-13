@@ -1,5 +1,5 @@
 // Demonstration topics, not confirmed XVR services or completed articles.
-const articleImage = '/images/blog/Articulo-Ejemplo.png';
+const articleImage = '/images/blog/Articulo-Ejemplo.webp';
 
 export const blogArticles = [
   {

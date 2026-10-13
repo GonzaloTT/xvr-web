@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import CTASection from '../../components/CTASection/CTASection';
 import { industryEditorial } from '../../data/industriesData';
 import { paths } from '../../routes/paths';
-import { assetUrl } from '../../utils/assetUrl';
+import { photoImage } from '../../utils/photoImage';
 import '../../styles/industries.css';
 
 export default function IndustryDetail({ industry }) {
@@ -17,7 +17,7 @@ export default function IndustryDetail({ industry }) {
             <p className="section-intro">{industry.introduction}</p>
             <Link className="button" to={paths.contact}>Hablar con XVR <span aria-hidden="true">→</span></Link>
           </div>
-          <img src={assetUrl(industry.image)} alt={`Imagen provisional de ${industry.title}`} />
+          <img {...photoImage(industry.image, '(max-width: 900px) 100vw, 600px')} alt={`Imagen provisional de ${industry.title}`} />
         </header>
         <p className="industry-editorial-note">{industryEditorial.notice}</p>
         <div className="industry-blocks">
