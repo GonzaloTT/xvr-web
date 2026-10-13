@@ -23,6 +23,7 @@ export default function Home() {
       <p className="section-intro">Marcas de referencia para explorar opciones tecnológicas según cada aplicación.</p>
       <div className="partners-grid">{partners.map(partner => <PartnerLogo key={partner.name} {...partner}/>)}</div>
       <p className="partners-note">Listado provisional: relaciones comerciales y logotipos pendientes de confirmación.</p>
+      <Link className="text-link" to={paths.brands}>Conocer nuestras marcas <span aria-hidden="true">→</span></Link>
     </div></section>
     <section id="industrias" className="section industries-section"><div className="container">
       <span className="eyebrow">APLICACIONES INDUSTRIALES</span>

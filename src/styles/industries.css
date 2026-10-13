@@ -10,6 +10,7 @@
 .industry-block h2 { font-size: 26px; margin-bottom: 20px; }
 .industry-topics { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px; }
 .industry-topics p { margin-top: 8px; }
+.industry-topics .industry-process-link { font-size: inherit; text-decoration: underline; }
 @media (max-width: 1100px) {
   .industry-detail-heading { grid-template-columns: 1fr; }
   .industry-detail-heading img { max-width: 600px; aspect-ratio: 2 / 1; }

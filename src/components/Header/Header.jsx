@@ -30,7 +30,7 @@ export default function Header() {
       <div className="topbar">
         <div className="container topbar-inner">
           <span>● PRECISIÓN INDUSTRIAL LÁSER</span>
-          <span>MÉXICO · USA · COSTA RICA</span>
+          <span>APLICACIONES INDUSTRIALES</span>
           <span className="topbar-support">SOPORTE Y PROCESOS</span>
         </div>
       </div>

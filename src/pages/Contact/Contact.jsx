@@ -29,7 +29,7 @@ export default function Contact() {
         </div>
       </section>
 
-      <section className="contact-registration" aria-label="Consulta y presencia regional">
+      <section className="contact-registration" aria-label="Consulta por región">
         <div className="container contact-layout">
           <ContactForm />
           <div className="contact-sidebar">

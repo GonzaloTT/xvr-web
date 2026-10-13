@@ -24,7 +24,12 @@ export default function IndustryDetail({ industry }) {
           {industry.blocks.map(block => <section className="industry-block" key={block.id} aria-labelledby={block.id}>
             <h2 id={block.id}>{block.title}</h2>
             <div className="industry-topics">
-              {block.items.map(item => <div key={item.title}><h3>{item.title}</h3><p>{item.text}</p></div>)}
+              {block.items.map(item => <div key={item.title}>
+                <h3>{item.title}</h3>
+                <p>{Array.isArray(item.text) ? item.text.map((part, index) =>
+                  typeof part === 'string' ? part : <Link className="text-link industry-process-link" key={index} to={paths.solution(part.processSlug)}>{part.label}</Link>
+                ) : item.text}</p>
+              </div>)}
             </div>
           </section>)}
         </div>

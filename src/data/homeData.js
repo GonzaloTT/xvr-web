@@ -137,5 +137,5 @@ export const company = {
   address: null,
   legalName: null,
   certifications: [],
-  regions: 'México · USA · Costa Rica',
+  regions: null, // Publish coverage only after XVR confirmation.
 };

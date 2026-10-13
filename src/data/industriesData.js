@@ -69,7 +69,13 @@ const industryDetails = {
           },
           {
             "title": "Procesos posibles",
-            "text": "Marcado, soldadura, corte o limpieza láser, según geometría, material y secuencia de fabricación."
+            "text": [
+              { label: 'Marcado', processSlug: 'marcado-laser' }, ', ',
+              { label: 'soldadura', processSlug: 'soldadura-laser' }, ', ',
+              { label: 'corte', processSlug: 'corte-microprocesos' }, ' o ',
+              { label: 'limpieza láser', processSlug: 'tratamiento-superficial' },
+              ', según geometría, material y secuencia de fabricación.'
+            ]
           }
         ]
       },
@@ -117,7 +123,12 @@ const industryDetails = {
           },
           {
             "title": "Procesos posibles",
-            "text": "Marcado, micromecanizado o soldadura láser, sujetos a evaluación del material y los requisitos del proyecto."
+            "text": [
+              { label: 'Marcado', processSlug: 'marcado-laser' }, ', ',
+              { label: 'micromecanizado', processSlug: 'corte-microprocesos' }, ' o ',
+              { label: 'soldadura láser', processSlug: 'soldadura-laser' },
+              ', sujetos a evaluación del material y los requisitos del proyecto.'
+            ]
           }
         ]
       },
@@ -165,7 +176,12 @@ const industryDetails = {
           },
           {
             "title": "Procesos posibles",
-            "text": "Marcado, microsoldadura y microprocesamiento láser, según las características del conjunto."
+            "text": [
+              { label: 'Marcado', processSlug: 'marcado-laser' }, ', ',
+              { label: 'microsoldadura', processSlug: 'soldadura-laser' }, ' y ',
+              { label: 'microprocesamiento láser', processSlug: 'corte-microprocesos' },
+              ', según las características del conjunto.'
+            ]
           }
         ]
       },
@@ -213,7 +229,12 @@ const industryDetails = {
           },
           {
             "title": "Procesos posibles",
-            "text": "Marcado, corte, perforación o tratamiento superficial láser, sujetos a evaluación del proyecto."
+            "text": [
+              { label: 'Marcado', processSlug: 'marcado-laser' }, ', ',
+              { label: 'corte, perforación', processSlug: 'corte-microprocesos' }, ' o ',
+              { label: 'tratamiento superficial láser', processSlug: 'tratamiento-superficial' },
+              ', sujetos a evaluación del proyecto.'
+            ]
           }
         ]
       },
