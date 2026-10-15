@@ -1,0 +1,6 @@
+.support-page { background: var(--surface); }
+.support-page > .container { max-width: 920px; }
+.support-demo-notice { padding: 18px; margin-bottom: 24px; border-left: 4px solid var(--blue); background: var(--surface-blue); color: var(--ink); }
+.support-page .contact-field > p { font-size: 13px; margin-top: 8px; }
+#support-photo-error { color: #ad2525; }
+#support-photo-error:empty { display: none; }

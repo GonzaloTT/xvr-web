@@ -81,10 +81,12 @@ export default function Header() {
               ? [{ title: 'Ver todas las industrias', href: paths.industries }, ...industries]
               : item.to === paths.products
                 ? [{ title: 'Productos', href: paths.products }, { title: 'Refacciones', href: paths.spareParts }]
-                : null;
-            return links ? <NavDropdown key={item.to} id={item.to === paths.industries ? 'industry-navigation-links' : 'product-navigation-links'}
-              label={item.label} to={item.to} links={links}
-              active={isActive(item.to) || (item.to === paths.products && isActive(paths.spareParts))}
+                : item.to === paths.contact
+                  ? [{ title: 'Cotiza con nosotros', href: paths.contact }, { title: '911 XVR', href: paths.support }]
+                  : null;
+            return links ? <NavDropdown key={item.to} id={`navigation-${item.to.slice(1)}`}
+              label={item.label} to={item.to === paths.contact ? undefined : item.to} links={links}
+              active={isActive(item.to) || (item.to === paths.products && isActive(paths.spareParts)) || (item.to === paths.contact && isActive(paths.support))}
               open={openDropdown === item.to} onToggle={() => setOpenDropdown(current => current === item.to ? null : item.to)}
               onClose={() => setOpenDropdown(current => current === item.to ? null : current)} onNavigate={closeNavigation}/>
               : <Link key={item.to} to={item.to} aria-current={isActive(item.to) ? 'page' : undefined} onClick={closeNavigation}>{item.label}</Link>;

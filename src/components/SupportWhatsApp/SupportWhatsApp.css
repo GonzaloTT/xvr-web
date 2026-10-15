@@ -1,0 +1,8 @@
+.support-whatsapp { position: fixed; right: max(16px, env(safe-area-inset-right)); bottom: max(16px, env(safe-area-inset-bottom)); z-index: 40; display: flex; align-items: center; gap: 10px; min-height: 52px; padding: 10px 16px; border: 1px solid var(--sky); border-radius: var(--radius-lg); background: var(--navy); color: white; box-shadow: var(--card-dark-shadow); font-weight: 700; }
+.support-whatsapp small { display: block; font-size: 10px; font-weight: 400; color: var(--muted-light); }
+.support-whatsapp:hover { background: var(--blue-hover); color: white; }
+.support-whatsapp:focus-visible { outline: 3px solid var(--blue); outline-offset: 4px; }
+/* Leave space to scroll every footer control above the fixed action. */
+#root > .site-footer { padding-bottom: calc(88px + env(safe-area-inset-bottom)); }
+html { scroll-padding-bottom: 96px; }
+@media (max-width: 700px) { .support-whatsapp { right: 12px; padding: 8px 12px; } }

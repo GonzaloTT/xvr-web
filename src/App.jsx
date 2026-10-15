@@ -1,6 +1,8 @@
 import { useEffect } from 'react';
 import { Link, Navigate, Route, Routes, useLocation } from 'react-router-dom';
 import Header from './components/Header/Header';
+import Support from './pages/Support/Support';
+import SupportWhatsApp from './components/SupportWhatsApp/SupportWhatsApp';
 import Footer from './components/Footer/Footer';
 import Home from './pages/Home/Home';
 import Solutions from './pages/Solutions/Solutions';
@@ -60,6 +62,7 @@ function ScrollToLocation({ fragment }) {
       [paths.spareParts]: 'Refacciones',
       [paths.accessories]: 'Accesorios y Periféricos',
       [paths.contact]: '911 XVR',
+      [paths.support]: 'Asistencia técnica 911 XVR · Demostración',
       [paths.industries]: 'Soluciones por industria',
     })[pathname] || 'XVR';
     document.title = `${title} | XVR Soluciones Láser Industriales`;
@@ -94,6 +97,7 @@ export default function App() {
         <Route path={paths.spareParts} element={<SpareParts />} />
         <Route path={paths.sparePart(':slug')} element={<SparePartDetail />} />
         <Route path={paths.contact} element={<Contact />} />
+        <Route path={paths.support} element={<Support />} />
         <Route path={paths.industries} element={<Industries />} />
         {industries.map(industry => (
           <Route key={industry.slug} path={industry.href} element={<IndustryDetail industry={industry} />} />
@@ -107,6 +111,7 @@ export default function App() {
         <Route path="*" element={<PendingRoute unknown />} />
       </Routes>}
       <Footer />
+      <SupportWhatsApp />
     </>
   );
 }

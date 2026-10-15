@@ -79,7 +79,21 @@ export const solutions = [
 
 
 // Marcas provisionales; relaciones y logotipos pendientes de confirmación.
-export { brands as partners } from './brandsData';
+import { brands } from './brandsData';
+
+// BOFA and MACKEN retain text: Bank of America and MAKLEN are different brands.
+const partnerLogos = {
+  coherent: 'coherent-logo.png',
+  'ipg-photonics': 'ipg-photonics-logo.png',
+  scanlab: 'scanlab-logo.png',
+  laserline: 'laserline-logo.png',
+  luxinar: 'luxinar-logo.png',
+  laservision: 'LaserVision_Logo.png',
+};
+export const partners = brands.map(brand => ({
+  ...brand,
+  logo: partnerLogos[brand.slug] ? `/images/partners/${partnerLogos[brand.slug]}` : null,
+}));
 
 export const accompaniment = [
   {

@@ -19,8 +19,9 @@ export default function NavDropdown({ id, label, to, links, active, open, onTogg
       }
     }}>
     <div className="nav-disclosure-label">
-      <Link to={to} aria-current={active ? 'page' : undefined} onClick={onNavigate}>{label}</Link>
-      <button ref={toggle} type="button" className="nav-disclosure-toggle" aria-label={`Mostrar u ocultar ${label.toLowerCase()}`} aria-expanded={open} aria-controls={id} onClick={onToggle}>
+      {to && <Link to={to} aria-current={active ? 'page' : undefined} onClick={onNavigate}>{label}</Link>}
+      <button ref={toggle} type="button" className={`nav-disclosure-toggle ${!to ? 'nav-disclosure-trigger' : ''} ${active ? 'is-active' : ''}`} aria-label={to ? `Mostrar u ocultar ${label.toLowerCase()}` : undefined} aria-expanded={open} aria-controls={id} onClick={onToggle}>
+        {!to && label}
         <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="m4 6 4 4 4-4" fill="none" stroke="currentColor" strokeWidth="1.5"/></svg>
       </button>
     </div>
