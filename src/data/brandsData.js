@@ -1,11 +1,12 @@
 // Provisional references, not confirmed official representations.
 export const brandsNotice = 'Selección y textos de demostración basados en información general de los fabricantes. Las relaciones comerciales y los logotipos requieren confirmación con XVR; no se afirma distribución autorizada ni representación oficial.';
 
+// Keep logo null until its approved file exists in public/images/partners/.
 // Products and spare parts refer to brands by brandSlug; do not duplicate their lists here.
 export const brands = [
   {
     "name": "COHERENT",
-    "logo": "/images/partners/coherent.svg",
+    "logo": null,
     "alt": "COHERENT",
     "slug": "coherent",
     "description": "Láseres y tecnologías fotónicas para explorar opciones de procesamiento de materiales.",
@@ -15,7 +16,7 @@ export const brands = [
   },
   {
     "name": "IPG Photonics",
-    "logo": "/images/partners/ipg-photonics.svg",
+    "logo": null,
     "alt": "IPG Photonics",
     "slug": "ipg-photonics",
     "description": "Tecnología de láser de fibra aplicada al procesamiento de materiales industriales.",
@@ -25,7 +26,7 @@ export const brands = [
   },
   {
     "name": "SCANLAB",
-    "logo": "/images/partners/scanlab.svg",
+    "logo": null,
     "alt": "SCANLAB",
     "slug": "scanlab",
     "description": "Sistemas de escaneo para dirigir y posicionar el haz en aplicaciones láser.",
@@ -35,7 +36,7 @@ export const brands = [
   },
   {
     "name": "LASERLINE",
-    "logo": "/images/partners/laserline.svg",
+    "logo": null,
     "alt": "LASERLINE",
     "slug": "laserline",
     "description": "Fuentes láser de diodo y óptica de procesamiento para aplicaciones industriales.",
@@ -45,7 +46,7 @@ export const brands = [
   },
   {
     "name": "LUXINAR",
-    "logo": "/images/partners/luxinar.svg",
+    "logo": null,
     "alt": "LUXINAR",
     "slug": "luxinar",
     "description": "Fuentes láser de CO₂ para aplicaciones de corte, marcado y grabado.",
@@ -55,7 +56,7 @@ export const brands = [
   },
   {
     "name": "BOFA",
-    "logo": "/images/partners/bofa.svg",
+    "logo": null,
     "alt": "BOFA",
     "slug": "bofa",
     "description": "Extracción y filtración de humos para acompañar procesos de trabajo con láser.",
@@ -65,7 +66,7 @@ export const brands = [
   },
   {
     "name": "laservision",
-    "logo": "/images/partners/laservision.svg",
+    "logo": null,
     "alt": "laservision",
     "slug": "laservision",
     "description": "Protección frente a radiación láser: gafas, filtros y barreras para distintos entornos.",
@@ -75,7 +76,7 @@ export const brands = [
   },
   {
     "name": "MACKEN",
-    "logo": "/images/partners/macken.svg",
+    "logo": null,
     "alt": "MACKEN",
     "slug": "macken",
     "description": "Instrumentos de medición de potencia para observar el comportamiento del láser.",

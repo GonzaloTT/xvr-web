@@ -3,35 +3,35 @@ import { paths } from '../routes/paths';
 // Editorial copy transcribed from the supplied reference. Technical figures,
 // certifications, phone, legal identity and service guarantees require approval.
 
-export const aboutImage = '/images/about/Nosotros.png';
+export const aboutImage = '/images/about/Nosotros.webp';
 
 export const heroSlides = [
   {
-    "src": "/images/hero/home/Home-Hero-01.png",
+    "src": "/images/hero/home/Home-Hero-01.webp",
     "label": "Problemas industriales",
     "title": "Tu reto de producción, nuestro punto de partida",
     "description": "Cuéntanos qué necesitas mejorar en tu proceso para explorar una solución adecuada."
   },
   {
-    "src": "/images/hero/home/Home-Hero-02.png",
+    "src": "/images/hero/home/Home-Hero-02.webp",
     "label": "Aplicaciones industriales",
     "title": "Tecnología para lo que tu industria necesita",
     "description": "Exploremos aplicaciones de identificación, unión y procesamiento de componentes."
   },
   {
-    "src": "/images/hero/home/Home-Hero-03.png",
+    "src": "/images/hero/home/Home-Hero-03.webp",
     "label": "Manufactura con láser",
     "title": "Encuentra el lugar del láser en tu manufactura",
     "description": "Conoce opciones de marcado, soldadura, corte y tratamiento superficial para tu proyecto."
   },
   {
-    "src": "/images/hero/home/Home-Hero-04.png",
+    "src": "/images/hero/home/Home-Hero-04.webp",
     "label": "Capacidad técnica y experiencia",
     "title": "Criterio técnico para decidir el siguiente paso",
     "description": "Conversemos sobre materiales, proceso e integración para orientar tu proyecto."
   },
   {
-    "src": "/images/hero/home/Home-Hero-05.png",
+    "src": "/images/hero/home/Home-Hero-05.webp",
     "label": "Marcas y partners tecnológicos",
     "title": "La tecnología adecuada empieza con una buena selección",
     "description": "Revisemos opciones de fabricantes y componentes según las necesidades de tu aplicación."
@@ -40,10 +40,10 @@ export const heroSlides = [
 
 // First image batch: Home cards only; interior industry images stay independent.
 export const homeIndustryImages = {
-  automotriz: '/images/hero/industrias/Industrias-Automotriz.png',
-  medica: '/images/hero/industrias/Industrias-Medicos.png',
-  electronica: '/images/hero/industrias/Industrias-Electronica.png',
-  aeronautica: '/images/hero/industrias/Industrias-Aereonautica.png',
+  automotriz: '/images/hero/industrias/Industrias-Automotriz.webp',
+  medica: '/images/hero/industrias/Industrias-Medicos.webp',
+  electronica: '/images/hero/industrias/Industrias-Electronica.webp',
+  aeronautica: '/images/hero/industrias/Industrias-Aereonautica.webp',
 };
 
 export const solutions = [
@@ -79,7 +79,21 @@ export const solutions = [
 
 
 // Marcas provisionales; relaciones y logotipos pendientes de confirmación.
-export { brands as partners } from './brandsData';
+import { brands } from './brandsData';
+
+// BOFA and MACKEN retain text: Bank of America and MAKLEN are different brands.
+const partnerLogos = {
+  coherent: 'coherent-logo.png',
+  'ipg-photonics': 'ipg-photonics-logo.png',
+  scanlab: 'scanlab-logo.png',
+  laserline: 'laserline-logo.png',
+  luxinar: 'luxinar-logo.png',
+  laservision: 'LaserVision_Logo.png',
+};
+export const partners = brands.map(brand => ({
+  ...brand,
+  logo: partnerLogos[brand.slug] ? `/images/partners/${partnerLogos[brand.slug]}` : null,
+}));
 
 export const accompaniment = [
   {
@@ -137,5 +151,5 @@ export const company = {
   address: null,
   legalName: null,
   certifications: [],
-  regions: 'México · USA · Costa Rica',
+  regions: null, // Publish coverage only after XVR confirmation.
 };

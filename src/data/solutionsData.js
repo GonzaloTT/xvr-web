@@ -10,11 +10,11 @@ export const solutionsOverview = {
   "description": "Identificar, unir, dar forma o preparar una superficie son necesidades distintas. Explora qué proceso láser podría encajar en tu aplicación.",
   "heroImages": [
     {
-      "src": "/images/hero/processes/Hero-Procesos-01.png",
+      "src": "/images/hero/processes/Hero-Procesos-01.webp",
       "label": "Portafolio de manufactura"
     },
     {
-      "src": "/images/hero/processes/Hero-Procesos-02.png",
+      "src": "/images/hero/processes/Hero-Procesos-02.webp",
       "label": "Procesos industriales"
     }
   ],
@@ -34,7 +34,7 @@ export const solutionPortfolio = [
     "title": "Identifica tus piezas a lo largo de la producción",
     "eyebrow": "IDENTIFICACIÓN Y TRAZABILIDAD",
     "description": "Cuando una pieza pierde su identificación, seguir su recorrido se vuelve difícil. El marcado láser es una opción a evaluar según el material y las necesidades de lectura.",
-    "image": "/images/processes/Proceso-Marcado.png",
+    "image": "/images/processes/Proceso-Marcado.webp",
     "benefits": [
       {
         "icon": "check",
@@ -59,7 +59,7 @@ export const solutionPortfolio = [
     "title": "Evalúa cómo unir los componentes de tu producto",
     "eyebrow": "UNIÓN DE COMPONENTES",
     "description": "La forma de unir dos piezas condiciona su ensamble. La soldadura láser puede ser una alternativa según los materiales, la geometría y la función de la unión.",
-    "image": "/images/processes/Proceso-Soldadura.png",
+    "image": "/images/processes/Proceso-Soldadura.webp",
     "benefits": [
       {
         "icon": "check",
@@ -84,7 +84,7 @@ export const solutionPortfolio = [
     "title": "Da forma a las geometrías que necesita tu componente",
     "eyebrow": "FABRICACIÓN Y PROCESAMIENTO DE GEOMETRÍAS",
     "description": "Fabricar contornos, aberturas o pequeños detalles plantea retos de acceso y acabado. El corte y los microprocesos láser son opciones a evaluar según la pieza.",
-    "image": "/images/processes/Proceso-Corte.png",
+    "image": "/images/processes/Proceso-Corte.webp",
     "benefits": [
       {
         "icon": "process",
@@ -109,7 +109,7 @@ export const solutionPortfolio = [
     "title": "Prepara la superficie para el siguiente paso",
     "eyebrow": "LIMPIEZA Y MODIFICACIÓN DE SUPERFICIES",
     "description": "Los residuos, recubrimientos o el estado de una superficie pueden dificultar la siguiente operación. El tratamiento láser es una alternativa a evaluar para limpiar, preparar o modificar zonas concretas.",
-    "image": "/images/processes/Proceso-Tratamiento.png",
+    "image": "/images/processes/Proceso-Tratamiento.webp",
     "benefits": [
       {
         "icon": "process",
@@ -139,11 +139,11 @@ export const solutionDetails = {
     "description": "Cuando una pieza pierde su identificación, seguir su recorrido se vuelve difícil. El marcado láser es una opción a evaluar según el material y las necesidades de lectura.",
     "heroImages": [
       {
-        "src": "/images/hero/marking/Hero-Proceso-Marcado-01.png",
+        "src": "/images/hero/marking/Hero-Proceso-Marcado-01.webp",
         "label": "Identificación de piezas"
       },
       {
-        "src": "/images/hero/marking/Hero-Proceso-Marcado-02.png",
+        "src": "/images/hero/marking/Hero-Proceso-Marcado-02.webp",
         "label": "Trazabilidad industrial"
       }
     ],
@@ -170,11 +170,11 @@ export const solutionDetails = {
     "description": "La forma de unir dos piezas condiciona su ensamble. La soldadura láser puede ser una alternativa según los materiales, la geometría y la función de la unión.",
     "heroImages": [
       {
-        "src": "/images/hero/weilding/Hero-Proceso-Soldadura-01.png",
+        "src": "/images/hero/weilding/Hero-Proceso-Soldadura-01.webp",
         "label": "UNIÓN Y ENSAMBLE"
       },
       {
-        "src": "/images/hero/weilding/Hero-Proceso-Soldadura-02.png",
+        "src": "/images/hero/weilding/Hero-Proceso-Soldadura-02.webp",
         "label": "Integración · UNIÓN Y ENSAMBLE"
       }
     ],
@@ -201,11 +201,11 @@ export const solutionDetails = {
     "description": "Fabricar contornos, aberturas o pequeños detalles plantea retos de acceso y acabado. El corte y los microprocesos láser son opciones a evaluar según la pieza.",
     "heroImages": [
       {
-        "src": "/images/hero/cutting/Hero-Proceso-Corte-01.png",
+        "src": "/images/hero/cutting/Hero-Proceso-Corte-01.webp",
         "label": "CORTE Y MICROPROCESOS"
       },
       {
-        "src": "/images/hero/cutting/Hero-Proceso-Corte-02.png",
+        "src": "/images/hero/cutting/Hero-Proceso-Corte-02.webp",
         "label": "Integración · CORTE Y MICROPROCESOS"
       }
     ],
@@ -232,11 +232,11 @@ export const solutionDetails = {
     "description": "Los residuos, recubrimientos o el estado de una superficie pueden dificultar la siguiente operación. El tratamiento láser es una alternativa a evaluar para limpiar, preparar o modificar zonas concretas.",
     "heroImages": [
       {
-        "src": "/images/hero/surface-treatment/Hero-Proceso-Tratamiento-01.png",
+        "src": "/images/hero/surface-treatment/Hero-Proceso-Tratamiento-01.webp",
         "label": "TRATAMIENTO Y LIMPIEZA"
       },
       {
-        "src": "/images/hero/surface-treatment/Hero-Proceso-Tratamiento-02.png",
+        "src": "/images/hero/surface-treatment/Hero-Proceso-Tratamiento-02.webp",
         "label": "Integración · TRATAMIENTO Y LIMPIEZA"
       }
     ],

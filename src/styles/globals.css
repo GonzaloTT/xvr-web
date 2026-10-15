@@ -166,3 +166,21 @@ body :is(.button, .menu-toggle, .carousel-pause, .accessories-filters button):ac
 #root > .site-header, #root > .site-footer { flex-shrink: 0; }
 .home-page .about-visual figure { overflow: hidden; border-radius: var(--radius-md); }
 .home-page .about-visual figure > img { height: auto; aspect-ratio: 600 / 320; object-fit: cover; }
+
+/* Full navigation from 1024px, including the specialist action. */
+@media (min-width: 1024px) {
+  .site-header .menu-toggle { display: none; }
+  .site-header .header-inner { gap: 12px; }
+  .site-header .main-nav, .site-header .main-nav.is-open { display: flex; position: static; flex-direction: row; align-items: center; flex-wrap: nowrap; gap: 8px; padding: 0; border: 0; box-shadow: none; max-height: none; overflow: visible; min-width: 0; }
+  .site-header .main-nav > a:not(.button) { min-height: 65px; padding-inline: 0; font-size: 13px; }
+  .site-header .header-cta { margin: 0 0 0 auto; padding: 8px 10px; font-size: 12px; white-space: normal; flex-shrink: 0; max-width: 155px; }
+}
+@media (min-width: 1024px) and (max-width: 1199px) {
+  .site-header .header-inner { width: calc(100% - 32px); gap: 10px; }
+  .site-header .brand-image { max-width: 105px; height: 36px; }
+  .site-header .main-nav { gap: 6px; }
+  .site-header .main-nav > a:not(.button), .site-header .nav-disclosure-label > a, .site-header .nav-disclosure-trigger { font-size: 12px; }
+  .site-header .nav-disclosure-toggle { min-width: 24px; padding-inline: 3px; }
+  .site-header .header-cta { max-width: 125px; font-size: 11px; padding-inline: 7px; }
+}
+.partners-section .partner-logo img { width: 100%; height: 40px; object-fit: contain; }

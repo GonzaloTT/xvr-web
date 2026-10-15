@@ -15,6 +15,7 @@ export const paths = {
   article: slug => '/blog/' + slug,
   about: '/#nosotros',
   contact: '/contacto',
+  support: '/911-xvr',
   solution: (slug) => `/soluciones/${slug}`,
 };
 
@@ -26,5 +27,5 @@ export const navigation = [
   { label: 'Nuestras Marcas', to: paths.brands },
   { label: 'Universo Láser', to: paths.blog },
   { label: 'Nosotros', to: paths.about },
-  { label: '911 XVR', to: paths.contact },
+  { label: 'Contáctanos', to: paths.contact },
 ];

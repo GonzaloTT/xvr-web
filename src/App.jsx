@@ -1,6 +1,8 @@
 import { useEffect } from 'react';
 import { Link, Navigate, Route, Routes, useLocation } from 'react-router-dom';
 import Header from './components/Header/Header';
+import Support from './pages/Support/Support';
+import SupportWhatsApp from './components/SupportWhatsApp/SupportWhatsApp';
 import Footer from './components/Footer/Footer';
 import Home from './pages/Home/Home';
 import Solutions from './pages/Solutions/Solutions';
@@ -25,7 +27,24 @@ import Blog from './pages/Blog/Blog';
 import BlogDetail from './pages/Blog/BlogDetail';
 import { blogArticles } from './data/blogData';
 
-function ScrollToLocation() {
+function decodeFragment(hash) {
+  try {
+    return decodeURIComponent(hash.slice(1));
+  } catch {
+    return null;
+  }
+}
+
+function skipToContent(event) {
+  const content = document.getElementById('contenido');
+  if (!content) return;
+  event.preventDefault();
+  content.setAttribute('tabindex', '-1');
+  content.focus({ preventScroll: true });
+  content.scrollIntoView();
+}
+
+function ScrollToLocation({ fragment }) {
   const { pathname, hash, key } = useLocation();
   useEffect(() => {
     const detail = Object.values(solutionDetails).find(solution => paths.solution(solution.slug) === pathname);
@@ -43,14 +62,15 @@ function ScrollToLocation() {
       [paths.spareParts]: 'Refacciones',
       [paths.accessories]: 'Accesorios y Periféricos',
       [paths.contact]: '911 XVR',
+      [paths.support]: 'Asistencia técnica 911 XVR · Demostración',
       [paths.industries]: 'Soluciones por industria',
     })[pathname] || 'XVR';
     document.title = `${title} | XVR Soluciones Láser Industriales`;
   }, [pathname]);
   useEffect(() => {
-    if (hash) document.getElementById(decodeURIComponent(hash.slice(1)))?.scrollIntoView();
+    if (hash && fragment !== null) document.getElementById(fragment)?.scrollIntoView();
     else window.scrollTo(0, 0);
-  }, [pathname, hash, key]);
+  }, [pathname, hash, key, fragment]);
   return null;
 }
 // Only a shared route boundary; future pages are intentionally not implemented.
@@ -59,12 +79,13 @@ function PendingRoute({ unknown = false, title }) {
 }
 export default function App() {
   const location = useLocation();
+  const fragment = decodeFragment(location.hash);
   return (
     <>
-      <Link className="skip-link" to={{ pathname: location.pathname, search: location.search, hash: '#contenido' }}>Saltar al contenido</Link>
-      <ScrollToLocation />
+      <Link className="skip-link" onClick={skipToContent} to={{ pathname: location.pathname, search: location.search, hash: '#contenido' }}>Saltar al contenido</Link>
+      <ScrollToLocation fragment={fragment} />
       <Header />
-      <Routes>
+      {fragment === null ? <PendingRoute unknown /> : <Routes>
         <Route path={paths.home} element={<Home />} />
         <Route path={paths.solutions} element={<Solutions />} />
         <Route path={paths.accessories} element={<Navigate replace to={{ pathname: paths.products, search: location.search, hash: location.hash }} />} />
@@ -76,6 +97,7 @@ export default function App() {
         <Route path={paths.spareParts} element={<SpareParts />} />
         <Route path={paths.sparePart(':slug')} element={<SparePartDetail />} />
         <Route path={paths.contact} element={<Contact />} />
+        <Route path={paths.support} element={<Support />} />
         <Route path={paths.industries} element={<Industries />} />
         {industries.map(industry => (
           <Route key={industry.slug} path={industry.href} element={<IndustryDetail industry={industry} />} />
@@ -83,14 +105,13 @@ export default function App() {
         {Object.values(solutionDetails).map(solution => (
           <Route key={solution.slug} path={paths.solution(solution.slug)} element={<SolutionDetail solution={solution} />} />
         ))}
-        {[`${paths.solutions}/:slug`].map(path => (
-          <Route key={path} path={path} element={<PendingRoute />} />
-        ))}
+        <Route path={`${paths.solutions}/:slug`} element={<PendingRoute unknown />} />
         <Route path={paths.blog} element={<Blog />} />
         <Route path={paths.article(':slug')} element={<BlogDetail />} />
         <Route path="*" element={<PendingRoute unknown />} />
-      </Routes>
+      </Routes>}
       <Footer />
+      <SupportWhatsApp />
     </>
   );
 }

@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import CTASection from '../../components/CTASection/CTASection';
 import { industryEditorial } from '../../data/industriesData';
 import { paths } from '../../routes/paths';
-import { assetUrl } from '../../utils/assetUrl';
+import { photoImage } from '../../utils/photoImage';
 import '../../styles/industries.css';
 
 export default function IndustryDetail({ industry }) {
@@ -17,14 +17,19 @@ export default function IndustryDetail({ industry }) {
             <p className="section-intro">{industry.introduction}</p>
             <Link className="button" to={paths.contact}>Hablar con XVR <span aria-hidden="true">→</span></Link>
           </div>
-          <img src={assetUrl(industry.image)} alt={`Imagen provisional de ${industry.title}`} />
+          <img {...photoImage(industry.image, '(max-width: 900px) 100vw, 600px')} alt={`Imagen provisional de ${industry.title}`} />
         </header>
         <p className="industry-editorial-note">{industryEditorial.notice}</p>
         <div className="industry-blocks">
           {industry.blocks.map(block => <section className="industry-block" key={block.id} aria-labelledby={block.id}>
             <h2 id={block.id}>{block.title}</h2>
             <div className="industry-topics">
-              {block.items.map(item => <div key={item.title}><h3>{item.title}</h3><p>{item.text}</p></div>)}
+              {block.items.map(item => <div key={item.title}>
+                <h3>{item.title}</h3>
+                <p>{Array.isArray(item.text) ? item.text.map((part, index) =>
+                  typeof part === 'string' ? part : <Link className="text-link industry-process-link" key={index} to={paths.solution(part.processSlug)}>{part.label}</Link>
+                ) : item.text}</p>
+              </div>)}
             </div>
           </section>)}
         </div>

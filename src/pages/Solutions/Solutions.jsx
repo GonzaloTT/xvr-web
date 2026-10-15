@@ -1,4 +1,4 @@
-import { assetUrl } from '../../utils/assetUrl';
+import { photoImage } from '../../utils/photoImage';
 import { Link } from 'react-router-dom';
 import HeroCarousel from '../../components/HeroCarousel/HeroCarousel';
 import CTASection from '../../components/CTASection/CTASection';
@@ -37,7 +37,7 @@ export default function Solutions() {
           {solutionPortfolio.map((solution, index) => (
             <section key={solution.slug} id={solution.slug} className="portfolio-solution" aria-labelledby={`${solution.slug}-title`}>
               <div className="portfolio-image">
-                <img src={assetUrl(solution.image)} alt={solution.alt || ''} loading="lazy" width="600" height="640" />
+                <img {...photoImage(solution.image, '(max-width: 480px) 480px, (max-width: 700px) 100vw, 1000px')} alt={solution.alt || ''} loading="lazy" width="600" height="640" />
                 <span>PROCESO {String(index + 1).padStart(2, '0')}</span>
               </div>
               <div className="portfolio-content">
