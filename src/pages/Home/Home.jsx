@@ -12,9 +12,7 @@ export default function Home() {
   return <main id="contenido" className="home-page">
     <HeroCarousel images={heroSlides} className="home-hero photo-hero" ariaLabel="Cómo puede ayudarte XVR">
       {slide => <div className="hero-copy">
-        <span className="hero-eyebrow">{slide.label}</span>
         <h1>{slide.title}</h1>
-        <p>{slide.description}</p>
         <Link className="button" to={paths.contact}>Hablar con XVR <span aria-hidden="true">→</span></Link>
       </div>}
     </HeroCarousel>
@@ -27,8 +25,8 @@ export default function Home() {
     </div></section>
     <section id="industrias" className="section industries-section"><div className="container">
       <span className="eyebrow">APLICACIONES INDUSTRIALES</span>
-      <div className="section-heading"><h2>Soluciones por industria</h2></div>
-      <div className="grid-four">{industries.map(item => <IndustryCard key={item.slug} {...item} image={homeIndustryImages[item.slug] || item.image}/>)}</div>
+      <div className="section-heading"><h2>Soluciones Láser</h2></div>
+      <div className="grid-four home-industries-grid">{industries.map(item => <IndustryCard key={item.slug} {...item} image={homeIndustryImages[item.slug] || item.image}/>)}</div>
     </div></section>
     <section id="nosotros" className="section about-section"><div className="container about-grid"><div><span className="eyebrow">QUIÉNES SOMOS</span><h2>Un partner tecnológico para la industria</h2><p className="section-intro">Conversa con XVR sobre identificación, unión, corte y preparación de superficies. Este prototipo presenta alternativas industriales; el alcance de los servicios y la cobertura se confirmarán para cada proyecto.</p><div className="about-highlights">{companyHighlights.map(item => <div key={item.title}><Icon name={item.icon}/><div><h3>{item.title}</h3><p>{item.description}</p></div></div>)}</div></div><div className="about-visual"><figure><img {...photoImage(aboutImage, '(max-width: 900px) 100vw, 600px')} alt="Ilustración provisional de una aplicación industrial" loading="lazy" width="600" height="320"/></figure></div></div></section>
     <section className="section accompaniment-section"><div className="container"><span className="eyebrow">CONTINUIDAD DE OPERACIÓN</span><h2 className="title-limit">Acompañamiento durante todo el ciclo operativo</h2><p className="section-intro">Desde la definición de una aplicación hasta las necesidades de operación, estos temas ayudan a plantear una consulta. Los servicios y condiciones de atención están sujetos a confirmación con XVR.</p><div className="grid-four">{accompaniment.map(item => <article className="accompaniment-card" key={item.title}><span className="icon-tile"><Icon name={item.icon}/></span><h3>{item.title}</h3><p>{item.description}</p></article>)}</div></div></section>

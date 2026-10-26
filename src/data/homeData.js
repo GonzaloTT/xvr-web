@@ -8,33 +8,23 @@ export const aboutImage = '/images/about/Nosotros.webp';
 export const heroSlides = [
   {
     "src": "/images/hero/home/Home-Hero-01.webp",
-    "label": "Problemas industriales",
-    "title": "Tu reto de producción, nuestro punto de partida",
-    "description": "Cuéntanos qué necesitas mejorar en tu proceso para explorar una solución adecuada."
+    "label": "XVR 1",
+    "title": "XVR desarrolla, implementa y da soporte a procesos de manufactura con láser en LatAm Norte, Centro América y Caribe."
   },
   {
     "src": "/images/hero/home/Home-Hero-02.webp",
-    "label": "Aplicaciones industriales",
-    "title": "Tecnología para lo que tu industria necesita",
-    "description": "Exploremos aplicaciones de identificación, unión y procesamiento de componentes."
+    "label": "XVR 2",
+    "title": "Representamos marcas líderes en su respectivo segmento de fuentes láser, óptica y seguridad, con extractores de humo y equipo de protección personal."
   },
   {
     "src": "/images/hero/home/Home-Hero-03.webp",
-    "label": "Manufactura con láser",
-    "title": "Encuentra el lugar del láser en tu manufactura",
-    "description": "Conoce opciones de marcado, soldadura, corte y tratamiento superficial para tu proyecto."
+    "label": "XVR 3",
+    "title": "Tenemos nuestro propio equipo de servicio técnico, infraestructura logística."
   },
   {
     "src": "/images/hero/home/Home-Hero-04.webp",
-    "label": "Capacidad técnica y experiencia",
-    "title": "Criterio técnico para decidir el siguiente paso",
-    "description": "Conversemos sobre materiales, proceso e integración para orientar tu proyecto."
-  },
-  {
-    "src": "/images/hero/home/Home-Hero-05.webp",
-    "label": "Marcas y partners tecnológicos",
-    "title": "La tecnología adecuada empieza con una buena selección",
-    "description": "Revisemos opciones de fabricantes y componentes según las necesidades de tu aplicación."
+    "label": "XVR 4",
+    "title": "Operamos a través de oficinas en Estados Unidos, México y Costa Rica."
   }
 ];
 
@@ -42,6 +32,8 @@ export const heroSlides = [
 export const homeIndustryImages = {
   automotriz: '/images/hero/industrias/Industrias-Automotriz.webp',
   medica: '/images/hero/industrias/Industrias-Medicos.webp',
+  // Temporary illustrative marking asset; dedicated Food & Beverage photo pending.
+  'food-beverage': '/images/processes/Proceso-Marcado.webp',
   electronica: '/images/hero/industrias/Industrias-Electronica.webp',
   aeronautica: '/images/hero/industrias/Industrias-Aereonautica.webp',
 };

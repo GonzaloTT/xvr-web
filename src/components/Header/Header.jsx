@@ -78,7 +78,7 @@ export default function Header() {
         >
           {navigation.map(item => {
             const links = item.to === paths.industries
-              ? [{ title: 'Ver todas las industrias', href: paths.industries }, ...industries]
+              ? [{ title: 'Todas las industrias', href: paths.industries }, ...industries]
               : item.to === paths.products
                 ? [{ title: 'Productos', href: paths.products }, { title: 'Refacciones', href: paths.spareParts }]
                 : item.to === paths.contact

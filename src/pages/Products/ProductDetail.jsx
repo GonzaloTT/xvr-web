@@ -19,7 +19,7 @@ export default function ProductDetail() {
       {product.applications?.length > 0 && <section className="catalog-related"><h2>Aplicaciones</h2><ul>{product.applications.map(item => <li key={item}>{item}</li>)}</ul></section>}
       {product.technicalInfo?.length > 0 && <section className="catalog-related"><h2>Información técnica</h2><dl>{product.technicalInfo.map(item => <div key={item.label}><dt>{item.label}</dt><dd>{item.value}</dd></div>)}</dl></section>}
       <RelatedLinks title="Industrias relacionadas" items={industries.filter(item => product.industrySlugs?.includes(item.slug)).map(item => ({name:item.title,href:item.href}))}/>
-      <RelatedLinks title="Procesos relacionados" items={Object.values(solutionDetails).filter(item => product.processSlugs?.includes(item.slug)).map(item => ({name:item.category,href:paths.solution(item.slug)}))}/>
+      <RelatedLinks title="Procesos relacionados" items={Object.values(solutionDetails).filter(item => product.processSlugs?.includes(item.slug)).map(item => ({name:item.category,href:paths.industries}))}/>
       <RelatedLinks title="Refacciones relacionadas" items={spareParts.filter(item => item.productSlugs?.includes(slug)).map(item => ({name:item.name,href:paths.sparePart(item.slug)}))}/>
     </section><CatalogCTA title="Solicita información sobre este producto"/>
   </main>;

@@ -5,11 +5,8 @@ import Support from './pages/Support/Support';
 import SupportWhatsApp from './components/SupportWhatsApp/SupportWhatsApp';
 import Footer from './components/Footer/Footer';
 import Home from './pages/Home/Home';
-import Solutions from './pages/Solutions/Solutions';
-import SolutionDetail from './pages/SolutionDetail/SolutionDetail';
 import Accessories from './pages/Accessories/Accessories';
 import Contact from './pages/Contact/Contact';
-import { solutionDetails } from './data/solutionsData';
 import { paths } from './routes/paths';
 import { industries } from './data/industriesData';
 import Industries from './pages/Industries/Industries';
@@ -47,13 +44,12 @@ function skipToContent(event) {
 function ScrollToLocation({ fragment }) {
   const { pathname, hash, key } = useLocation();
   useEffect(() => {
-    const detail = Object.values(solutionDetails).find(solution => paths.solution(solution.slug) === pathname);
     const industry = industries.find(item => item.href === pathname);
     const catalogRecord = brands.find(item => paths.brand(item.slug) === pathname)
       || products.find(item => paths.product(item.slug) === pathname)
       || spareParts.find(item => paths.sparePart(item.slug) === pathname);
     const article = blogArticles.find(item => paths.article(item.slug) === pathname);
-    const title = article?.title || catalogRecord?.name || detail?.title || industry?.title || ({
+    const title = article?.title || catalogRecord?.name || industry?.title || ({
       [paths.home]: 'Inicio',
       [paths.solutions]: 'Soluciones Láser',
       [paths.blog]: 'Universo Láser',
@@ -63,7 +59,7 @@ function ScrollToLocation({ fragment }) {
       [paths.accessories]: 'Accesorios y Periféricos',
       [paths.contact]: '911 XVR',
       [paths.support]: 'Asistencia técnica 911 XVR · Demostración',
-      [paths.industries]: 'Soluciones por industria',
+      [paths.industries]: 'Soluciones Láser',
     })[pathname] || 'XVR';
     document.title = `${title} | XVR Soluciones Láser Industriales`;
   }, [pathname]);
@@ -87,7 +83,8 @@ export default function App() {
       <Header />
       {fragment === null ? <PendingRoute unknown /> : <Routes>
         <Route path={paths.home} element={<Home />} />
-        <Route path={paths.solutions} element={<Solutions />} />
+        {/* Legacy process URLs resolve to the unified industry overview. */}
+        <Route path={paths.solutions} element={<Navigate replace to={{ pathname: paths.industries, search: location.search }} />} />
         <Route path={paths.accessories} element={<Navigate replace to={{ pathname: paths.products, search: location.search, hash: location.hash }} />} />
         <Route path={paths.legacyAccessories} element={<Navigate replace to={{ pathname: paths.products, search: location.search, hash: location.hash }} />} />
         <Route path={paths.brands} element={<Brands />} />
@@ -102,10 +99,7 @@ export default function App() {
         {industries.map(industry => (
           <Route key={industry.slug} path={industry.href} element={<IndustryDetail industry={industry} />} />
         ))}
-        {Object.values(solutionDetails).map(solution => (
-          <Route key={solution.slug} path={paths.solution(solution.slug)} element={<SolutionDetail solution={solution} />} />
-        ))}
-        <Route path={`${paths.solutions}/:slug`} element={<PendingRoute unknown />} />
+        <Route path={`${paths.solutions}/*`} element={<Navigate replace to={{ pathname: paths.industries, search: location.search }} />} />
         <Route path={paths.blog} element={<Blog />} />
         <Route path={paths.article(':slug')} element={<BlogDetail />} />
         <Route path="*" element={<PendingRoute unknown />} />

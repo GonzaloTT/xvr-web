@@ -17,7 +17,7 @@ export default function IndustryDetail({ industry }) {
             <p className="section-intro">{industry.introduction}</p>
             <Link className="button" to={paths.contact}>Hablar con XVR <span aria-hidden="true">→</span></Link>
           </div>
-          <img {...photoImage(industry.image, '(max-width: 900px) 100vw, 600px')} alt={`Imagen provisional de ${industry.title}`} />
+          <img {...photoImage(industry.image, '(max-width: 900px) 100vw, 600px')} alt={industry.imageAlt || `Imagen provisional de ${industry.title}`} />
         </header>
         <p className="industry-editorial-note">{industryEditorial.notice}</p>
         <div className="industry-blocks">
@@ -26,9 +26,7 @@ export default function IndustryDetail({ industry }) {
             <div className="industry-topics">
               {block.items.map(item => <div key={item.title}>
                 <h3>{item.title}</h3>
-                <p>{Array.isArray(item.text) ? item.text.map((part, index) =>
-                  typeof part === 'string' ? part : <Link className="text-link industry-process-link" key={index} to={paths.solution(part.processSlug)}>{part.label}</Link>
-                ) : item.text}</p>
+                <p>{item.text}</p>
               </div>)}
             </div>
           </section>)}
