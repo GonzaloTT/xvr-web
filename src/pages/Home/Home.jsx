@@ -18,7 +18,7 @@ export default function Home() {
     </HeroCarousel>
     <section className="section partners-section"><div className="container">
       <span className="eyebrow">ECOSISTEMA TECNOLÓGICO</span><h2>Socios tecnológicos</h2>
-      <p className="section-intro">Marcas de referencia para explorar opciones tecnológicas según cada aplicación.</p>
+      <p className="section-intro">Marcas de referencia para explorar opciones tecnológicas según cada aplicación: Coherent, Bystronic ROFIN, Precitec, Laserline, Luxinar, BOFA, laservision, Macken y PUREX.</p>
       <div className="partners-grid">{partners.map(partner => <PartnerLogo key={partner.name} {...partner}/>)}</div>
       <p className="partners-note">Listado provisional: relaciones comerciales y logotipos pendientes de confirmación.</p>
       <Link className="text-link" to={paths.brands}>Conocer nuestras marcas <span aria-hidden="true">→</span></Link>
