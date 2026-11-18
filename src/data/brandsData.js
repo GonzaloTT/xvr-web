@@ -1,5 +1,5 @@
 // Provisional references, not confirmed official representations.
-export const brandsNotice = 'Selección y textos de demostración basados en información general de los fabricantes. Las relaciones comerciales y los logotipos requieren confirmación con XVR; no se afirma distribución autorizada ni representación oficial.';
+export const brandsNotice = 'Las selecciones y textos están basados en información general; relaciones comerciales y logotipos sujetos a confirmación con XVR.';
 
 // Keep logo null until its approved file exists in public/images/partners/.
 // Products and spare parts refer to brands by brandSlug; do not duplicate their lists here.
@@ -9,7 +9,7 @@ export const brands = [
     "logo": null,
     "alt": "COHERENT",
     "slug": "coherent",
-    "description": "Láseres y tecnologías fotónicas para explorar opciones de procesamiento de materiales.",
+    "description": "Fabricante de fuentes láser y tecnología óptica de referencia.",
     "sourceUrl": "https://www.coherent.com/lasers",
     "technologies": [],
     "accessoryIds": []
@@ -19,7 +19,7 @@ export const brands = [
     "logo": null,
     "alt": "IPG Photonics",
     "slug": "ipg-photonics",
-    "description": "Tecnología de láser de fibra aplicada al procesamiento de materiales industriales.",
+    "description": "Soluciones de fibra óptica y sistemas láser industriales.",
     "sourceUrl": "https://www.ipgphotonics.com/",
     "technologies": [],
     "accessoryIds": []
@@ -29,7 +29,7 @@ export const brands = [
     "logo": null,
     "alt": "SCANLAB",
     "slug": "scanlab",
-    "description": "Sistemas de escaneo para dirigir y posicionar el haz en aplicaciones láser.",
+    "description": "Sistemas de escaneo y cabezales ópticos de alta precisión.",
     "sourceUrl": "https://www.scanlab.de/en",
     "technologies": [],
     "accessoryIds": []
@@ -39,7 +39,7 @@ export const brands = [
     "logo": null,
     "alt": "LASERLINE",
     "slug": "laserline",
-    "description": "Fuentes láser de diodo y óptica de procesamiento para aplicaciones industriales.",
+    "description": "Sistemas láser de diodo de alta potencia para manufactura.",
     "sourceUrl": "https://www.laserline.com/en-int/products/",
     "technologies": [],
     "accessoryIds": []
@@ -49,7 +49,7 @@ export const brands = [
     "logo": null,
     "alt": "LUXINAR",
     "slug": "luxinar",
-    "description": "Fuentes láser de CO₂ para aplicaciones de corte, marcado y grabado.",
+    "description": "Fuentes láser de CO₂ para corte y marcado industrial.",
     "sourceUrl": "https://luxinar.com/en/laser-cutter/",
     "technologies": [],
     "accessoryIds": []
@@ -59,7 +59,7 @@ export const brands = [
     "logo": null,
     "alt": "BOFA",
     "slug": "bofa",
-    "description": "Extracción y filtración de humos para acompañar procesos de trabajo con láser.",
+    "description": "Sistemas especializados de extracción y filtración de humos.",
     "sourceUrl": "https://www.donaldsonbofa.com/fume-extraction-systems/ad-nano/",
     "technologies": [],
     "accessoryIds": []
@@ -69,7 +69,7 @@ export const brands = [
     "logo": null,
     "alt": "laservision",
     "slug": "laservision",
-    "description": "Protección frente a radiación láser: gafas, filtros y barreras para distintos entornos.",
+    "description": "Gafas y ventanas de protección y seguridad láser.",
     "sourceUrl": "https://www.uvex-group.com/en/brands/laservision/",
     "technologies": [],
     "accessoryIds": []
@@ -79,7 +79,7 @@ export const brands = [
     "logo": null,
     "alt": "MACKEN",
     "slug": "macken",
-    "description": "Instrumentos de medición de potencia para observar el comportamiento del láser.",
+    "description": "Instrumentos de medición y visualización de rayos láser.",
     "sourceUrl": "https://www.macken.com/pages/analog-laser-power-probes",
     "technologies": [],
     "accessoryIds": []
