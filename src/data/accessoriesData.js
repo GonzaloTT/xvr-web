@@ -73,7 +73,7 @@ export const accessories = [
     id: 'extraccion-filtracion', catalogType: 'product', category: 'extraction', eyebrow: 'CAT-02 / GESTIÓN AMBIENTAL',
     title: 'Extracción y Filtración de Humos Industriales',
     image: '/images/products/Producto-01.webp', alt: '',
-    description: 'Equipos de captación y filtración para gestionar las emisiones del proceso, considerando el material trabajado y las condiciones del área de operación.',
+    description: 'Extracción y filtración de humos industriales: captación, filtración y mantenimiento de consumibles.',
     highlights: [
       { title: 'Captación en el proceso', description: 'Revisión de puntos de extracción y conexiones a la estación.' },
       { title: 'Etapas de filtración', description: 'Selección del medio filtrante según las emisiones identificadas.' },
@@ -86,7 +86,7 @@ export const accessories = [
     id: 'medicion-optica', catalogType: 'product', category: 'measurement', eyebrow: 'CAT-03 / METROLOGÍA Y CONTROL',
     title: 'Medición de Potencia, Perfil de Haz y Calibración',
     image: '/images/products/Producto-02.webp', alt: '',
-    description: 'Instrumentos para observar y evaluar características del haz. Su selección depende de la fuente, la configuración óptica y las necesidades de medición.',
+    description: 'Medición de potencia, perfil de haz y calibración: sensores y análisis de distribución de haz.',
     highlights: [
       { title: 'Perfil de haz', description: 'Herramientas para examinar la distribución del haz en la aplicación.' },
       { title: 'Medición de potencia', description: 'Selección de sensores compatibles con el sistema a evaluar.' },
@@ -99,7 +99,7 @@ export const accessories = [
     id: 'enfriamiento-industrial', catalogType: 'product', category: 'cooling', eyebrow: 'CAT-04 / TERMORREGULACIÓN',
     title: 'Enfriamiento y Termorregulación (Chillers)',
     image: '/images/products/Producto-03.webp', alt: '',
-    description: 'Sistemas de enfriamiento para acompañar la operación de fuentes y componentes láser, seleccionados a partir de sus requisitos térmicos y de instalación.',
+    description: 'Enfriamiento y termorregulación / Chillers: control térmico y circuitos de enfriamiento.',
     highlights: [
       { title: 'Control de temperatura', description: 'Configuración de la termorregulación según las necesidades del equipo.' },
       { title: 'Circuitos de enfriamiento', description: 'Revisión de conexiones y compatibilidad del fluido de trabajo.' },

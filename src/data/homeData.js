@@ -14,17 +14,17 @@ export const heroSlides = [
   {
     "src": "/images/hero/home/Home-Hero-02.webp",
     "label": "XVR 2",
-    "title": "Representamos marcas líderes en su respectivo segmento de fuentes láser, óptica y seguridad, con extractores de humo y equipo de protección personal."
+    "title": "Representamos marcas líderes en su respectivo segmento. Generadores láser, óptica, extractores de humo y equipo de protección personal."
   },
   {
     "src": "/images/hero/home/Home-Hero-03.webp",
     "label": "XVR 3",
-    "title": "Tenemos nuestro propio equipo de servicio técnico, infraestructura logística."
+    "title": "Tenemos servicio técnico y logística propios."
   },
   {
     "src": "/images/hero/home/Home-Hero-04.webp",
     "label": "XVR 4",
-    "title": "Operamos a través de oficinas en Estados Unidos, México y Costa Rica."
+    "title": "Tenemos oficinas en Estados Unidos, México y Costa Rica."
   }
 ];
 

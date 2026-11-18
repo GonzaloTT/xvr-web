@@ -4,7 +4,7 @@ import { homeIndustryImages } from './homeData';
 // Technical content supplied by XVR for the presentation; not a certification
 // or a guarantee of results for a particular material or production line.
 export const industryEditorial = {
-  introduction: 'Encuentra tu industria, identifica una necesidad y explora los procesos láser relacionados. Cada aplicación requiere evaluar el material, la geometría y las condiciones de producción.',
+  introduction: 'Aquí encontrará las aplicaciones más comunes para distintas industrias.',
   notice: 'La selección del proceso y sus ventajas dependen del material, la geometría y la validación del proyecto con XVR. Estas aplicaciones no acreditan certificaciones ni garantizan resultados específicos.',
   ctaTitle: '¿Tienes un reto de manufactura en esta industria?',
 };
@@ -27,22 +27,22 @@ const records = [
     slug: 'automotriz', icon: 'car', title: 'Automotriz y E-Mobility',
     description: 'Trazabilidad y uniones repetibles para vehículos, sensores y componentes de movilidad.',
     headline: 'Trazabilidad y flexibilidad para la manufactura automotriz',
-    introduction: 'La industria automotriz impulsa la innovación en manufactura láser con nuevos materiales y procesos. La producción de alto volumen y alta mezcla demanda estabilidad, rapidez y flexibilidad ante cambios de modelo.',
-    applicationLinks: [application('Trazabilidad de componentes', 'marcado-laser'), application('Unión de metales y plásticos', 'soldadura-laser'), application('Corte fino de componentes', 'corte-microprocesos')],
+    introduction: 'La industria automotriz requiere innovación continua en diseño, materiales y métodos de manufactura sin perder la trazabilidad como parte del control de calidad. La tecnología, la cual está en innovación constante, trae novedades que permiten trabajar con eficiencia, menos residuos y gran flexibilidad. Se adapta a volúmenes y mezclas de producto dinámicas gracias a la combinación de electrónica, óptica y software.',
+    applicationLinks: [application('Trazabilidad de componentes', 'marcado-laser'), application('Unión de metales y plásticos', 'soldadura-laser'), application('Corte de materiales diversos', 'corte-microprocesos')],
     blocks: [
       { id: 'necesidades', title: 'Necesidades y retos', items: [
         { title: 'Trazabilidad total', text: 'Conservar la identificación permanente de piezas y componentes de seguridad a lo largo de la producción.' },
         { title: 'Repetibilidad y cambios de modelo', text: 'Evaluar procesos estables y rápidos ante materiales diversos y estrictos estándares de calidad, tanto en producción continua de alto volumen como de bajo volumen y alta mezcla.' },
       ] },
       { id: 'aplicaciones', title: 'Aplicaciones y procesos láser', items: [
-        process('Identificación y trazabilidad', 'marcado-laser', 'Marcado de VIN, DataMatrix y QR; identificación permanente en metales, plásticos y componentes de seguridad.'),
-        process('Uniones metálicas', 'soldadura-laser', 'Soldadura láser de metales, con o sin aporte, para Body & White, elementos de transmisión, soportes y estructuras.'),
-        process('Sellado de plásticos', 'soldadura-laser', 'Sellado hermético sin contacto en sensores de presión o ADAS, housings electrónicos, iluminación, módulos de conectividad y consolas de entretenimiento.'),
-        process('Corte y preparación de superficies', 'corte-microprocesos', 'Corte fino de componentes metálicos y ablación. La preparación de superficies y el endurecimiento se evalúan según el material.'),
+        process('Marcado - Identificación y trazabilidad', 'marcado-laser', 'Marcado de VIN, DataMatrix y QR. Identificación permanente en metales, plásticos y componentes de seguridad.'),
+        process('Soldadura de plásticos', 'soldadura-laser', 'Sellado hermético sin contacto en sensores, housings electrónicos, iluminación y consolas.'),
+        process('Soldadura de metales', 'soldadura-laser', 'Con o sin aporte, para Body & White, transmisiones y estructuras.'),
+        process('Corte de materiales diversos', 'corte-microprocesos', 'Corte de precisión en estructuras, textiles o recubrimientos.'),
       ] },
       { id: 'tecnologias', title: 'Ventajas a evaluar', items: [
-        { title: 'Estabilidad del proceso', text: 'Repetibilidad y rapidez para acompañar la producción de alto volumen y alta mezcla.' },
-        { title: 'Flexibilidad de manufactura', text: 'Adaptación ante cambios de modelo y nuevos materiales. La estandarización permite mantener los tiempos muertos bajo control y reducir las variables que deben ajustarse; la preparación y el endurecimiento se evalúan dentro de estos procesos.' },
+        { title: 'Estabilidad del proceso', text: 'Repetibilidad y rapidez.' },
+        { title: 'Flexibilidad de manufactura', text: 'Adaptación ante cambios de modelo y nuevos materiales, así como baja generación de residuos.' },
       ] },
     ],
   },
@@ -50,21 +50,21 @@ const records = [
     slug: 'medica', icon: 'medical', title: 'Dispositivos Médicos',
     description: 'Identificación permanente y procesos de precisión para dispositivos y microcomponentes médicos.',
     headline: 'Precisión y trazabilidad para dispositivos médicos',
-    introduction: 'La manufactura médica requiere procesos controlados, repetibles y documentables. La tecnología láser de precisión y sin contacto permite evaluar aplicaciones con requisitos estrictos de trazabilidad y validación.',
-    applicationLinks: [application('Identificación UDI', 'marcado-laser'), application('Sellado de dispositivos', 'soldadura-laser'), application('Corte de microcomponentes', 'corte-microprocesos')],
+    introduction: 'La manufactura de dispositivos médicos requiere repetibilidad, precisión y escalabilidad sin comprometer la biocompatibilidad y la normativa. Son productos destinados a impactar positivamente en la vida de los pacientes. La tecnología láser permite fabricar equipo quirúrgico, prótesis y dispositivos médicos con precisión y eficacia.',
+    applicationLinks: [application('Identificación UDI', 'marcado-laser'), application('Soldadura de dispositivos', 'soldadura-laser'), application('Corte de microcomponentes', 'corte-microprocesos')],
     blocks: [
       { id: 'necesidades', title: 'Necesidades y retos', items: [
-        { title: 'Identificación y material', text: 'Conseguir una identificación permanente sin dañar el material, considerando acero inoxidable, polímeros médicos y titanio.' },
-        { title: 'Validación documentable', text: 'Definir criterios de aceptación y trazabilidad conforme a las normativas aplicables. No se atribuyen certificaciones específicas a XVR.' },
+        { title: 'Precisión y repetibilidad', text: 'Los procesos operan en el rango de los micrómetros y con poca tolerancia al error. El láser se convierte en la tecnología que ofrece precisión y repetibilidad hasta en geometrías complejas sin necesidad de contacto físico.' },
       ] },
       { id: 'aplicaciones', title: 'Aplicaciones y procesos láser', items: [
-        process('Trazabilidad UDI', 'marcado-laser', 'Marcado UDI conforme a las normativas aplicables e identificación permanente de dispositivos y componentes.'),
-        process('Uniones limpias', 'soldadura-laser', 'Soldadura de plásticos médicos y sellado hermético de dispositivos, con uniones sin adhesivos.'),
-        process('Microcomponentes y superficies', 'corte-microprocesos', 'Corte de tubos y microcomponentes, ablación de recubrimientos y texturizado superficial funcional.'),
+        process('Trazabilidad e identificación', 'marcado-laser', 'Marcado UDI conforme a normas e identificación permanente de dispositivos.'),
+        process('Ablación', 'tratamiento-superficial', 'Remoción de recubrimientos en secciones reducidas y sin afectar la dimensionalidad.'),
+        process('Corte y perforado', 'corte-microprocesos', 'Tubos metálicos o plásticos, alambres y placas.'),
+        process('Soldadura', 'soldadura-laser', 'Soldadura de metales (acero y nitinol) y plásticos. Tanto en dispositivos quirúrgicos como en dispositivos de diagnóstico y prótesis.'),
       ] },
       { id: 'tecnologias', title: 'Ventajas a evaluar', items: [
-        { title: 'Precisión y repetibilidad', text: 'Procesos limpios y sin contacto, con trazabilidad permanente y posibilidades de reducir la variabilidad y el scrap.' },
-        { title: 'Entornos controlados', text: 'Integración en entornos controlados y facilidad para documentar la validación IQ/OQ/PQ, sujeta al proceso y sus requisitos.' },
+        { title: 'Precisión y repetibilidad', text: 'Procesos limpios sin contacto.' },
+        { title: 'Entornos controlados', text: 'Integración y facilidad para documentar validación IQ/OQ/PQ.' },
       ] },
     ],
   },
@@ -73,24 +73,23 @@ const records = [
     imageAlt: 'Imagen ilustrativa de marcado láser; fotografía específica de Food & Beverage pendiente.',
     description: 'Codificación permanente y procesamiento de empaques para líneas de alimentos y bebidas.',
     headline: 'Identificación y procesamiento de empaques',
-    introduction: 'Food & Beverage requiere procesos confiables e higiénicos en entornos de alta producción y limpieza frecuente. El láser permite evaluar la identificación permanente y la reducción de tintas y consumibles.',
+    introduction: 'Food & Beverage requiere procesos confiables e higiénicos en entornos salubres de alta producción. El láser genera referencias de lotificación, trazabilidad y etiquetado permanente sin recurrir a químicos o mantenimientos constantes.',
     applicationLinks: [application('Fechado y codificación', 'marcado-laser'), application('Identificación de envases', 'marcado-laser'), application('Corte de films y laminados', 'corte-microprocesos')],
     blocks: [
       { id: 'necesidades', title: 'Necesidades y retos', items: [
-        { title: 'Producción y limpieza', text: 'Integrar la operación en líneas de alta producción y ambientes agresivos con lavados frecuentes, evaluando la robustez necesaria y manteniendo procesos higiénicos.' },
-        { title: 'Identificación legible', text: 'Mantener información permanente sobre empaques y envases y reducir el uso de tintas y consumibles.' },
+        { title: 'Ambientes demandantes', text: 'Ajustar el proceso láser en ambientes demandantes: líneas de alta velocidad, apego a normas de salubridad, entornos con temperaturas extremas o información diversa según el mercado.' },
+        { title: 'Identificación legible y permanente', text: 'La identificación de los productos debe ser legible y permanente. Reducción de químicos y versatilidad para trabajar con materiales diversos (plásticos, materiales orgánicos o vidrio).' },
       ] },
       { id: 'aplicaciones', title: 'Aplicaciones y procesos láser', items: [
-        process('Fechado y codificación de envases', 'marcado-laser', 'Fechado y codificación de empaques, así como marcado directo sobre envases sin consumibles de tinta.'),
-        process('Materiales de empaque', 'corte-microprocesos', 'Corte de materiales de empaque y procesamiento de films y laminados, según su composición y aplicación.'),
+        process('Fechado y codificación', 'marcado-laser', 'Fechado y codificación de empaques y marcado directo sobre envases sin consumibles de tinta.'),
+        process('Materiales de empaque', 'corte-microprocesos', 'Corte de materiales de empaque y procesamiento de films y laminados.'),
       ] },
       { id: 'tecnologias', title: 'Ventajas para Food & Beverage', items: [
-        { title: 'Identificación sin tinta', text: 'Marcado permanente y legible, eliminación de consumibles de tinta y procesos higiénicos.' },
-        { title: 'Continuidad de producción', text: 'Alta disponibilidad, menor mantenimiento e integración en líneas existentes como ventajas a evaluar en las condiciones del proyecto.' },
+        { title: 'Identificación sin tinta', text: 'Identificación sin tinta.' },
+        { title: 'Continuidad de producción', text: 'Alta disponibilidad.' },
       ] },
       { id: 'seguridad', title: 'Calidad y seguridad', items: [
-        { title: 'Extracción y medición', text: 'Considerar sistemas de extracción de humo y equipos de medición de potencia.' },
-        { title: 'Protección láser', text: 'Evaluar ventanas de protección láser y equipo de protección personal para la aplicación.' },
+        { title: 'Extracción y medición', text: 'Extracción y filtración de humos y equipos de medición de potencia.' },
       ] },
     ],
   },
@@ -98,18 +97,18 @@ const records = [
     slug: 'electronica', icon: 'chip', title: 'Electrónica y Semiconductores',
     description: 'Identificación y microprocesos para componentes sensibles, circuitos y ensambles electrónicos.',
     headline: 'Precisión para componentes electrónicos sensibles',
-    introduction: 'La miniaturización, la complejidad funcional y la producción de alto volumen exigen precisión en componentes sensibles. Los procesos sin contacto y de bajo impacto térmico se evalúan según los materiales y el diseño del ensamble.',
+    introduction: 'La miniaturización y producción de alto volumen exigen precisión en componentes sensibles mediante procesos sin contacto y de bajo impacto térmico.',
     applicationLinks: [application('Trazabilidad de PCBs', 'marcado-laser'), application('Unión de microcomponentes', 'soldadura-laser'), application('Corte de circuitos flexibles', 'corte-microprocesos')],
     blocks: [
       { id: 'necesidades', title: 'Necesidades y retos', items: [
-        { title: 'Microescala y sensibilidad', text: 'Trabajar con alta precisión y bajo impacto térmico, preservando componentes sensibles en áreas reducidas.' },
-        { title: 'Volumen y cambios de diseño', text: 'Mantener flexibilidad ante cambios de diseño e integración en líneas automatizadas de alto volumen.' },
+        { title: 'Microescala y sensibilidad', text: 'Trabajar con alta precisión y bajo impacto térmico preservando las propiedades de los materiales.' },
+        { title: 'Volumen y flexibilidad', text: 'Mantener adaptabilidad ante cambios de diseño en líneas automatizadas.' },
       ] },
       { id: 'aplicaciones', title: 'Aplicaciones y procesos láser', items: [
-        process('Identificación de componentes', 'marcado-laser', 'Identificación de PCBs, marcado de componentes electrónicos y codificación para trazabilidad.'),
-        process('Soldering', 'soldadura-laser', 'Aplicaciones sobre materiales flexibles o rígidos, con o sin aporte, incluido el trabajo con materiales preestañados (pre-tinned). El lazo cerrado puede incorporar cámara térmica o pirómetro; la configuración requiere evaluación.'),
-        process('Soldadura de plásticos', 'soldadura-laser', 'Soldadura láser de plásticos para microcomponentes y encapsulado láser, con sellado hermético sin contacto y procesos térmicamente controlados.'),
-        process('Corte y ablación', 'corte-microprocesos', 'Corte de circuitos flexibles, ablación de capas y ajustes de precisión.'),
+        process('Identificación', 'marcado-laser', 'Identificación de PCBs y codificación de componentes electrónicos.'),
+        process('Soldadura de plásticos', 'soldadura-laser', 'Soldadura láser para microcomponentes y encapsulado con sellado hermético.'),
+        process('Soldering', 'soldadura-laser', 'Aplicaciones sobre circuitos flexibles o rígidos (con o sin aporte, preestañados) con cámara térmica o pirómetro.'),
+        process('Corte y ablación', 'corte-microprocesos', 'Corte de circuitos flexibles y ablación de capas de precisión.'),
       ] },
       { id: 'tecnologias', title: 'Ventajas a evaluar', items: [
         { title: 'Control a microescala', text: 'Alta precisión, procesos sin contacto y reducción de daños por choque térmico.' },
@@ -125,17 +124,17 @@ const records = [
     slug: 'aeronautica', icon: 'plane', title: 'Aeronáutica y Defensa',
     description: 'Trazabilidad y procesos controlados para componentes aeronáuticos y de defensa.',
     headline: 'Control y trazabilidad para componentes especializados',
-    introduction: 'La manufactura aeronáutica y de defensa requiere procesos controlados, repetibles y documentables. La precisión y la estabilidad deben acompañar la preservación de las propiedades del material y los requisitos de desempeño y seguridad.',
-    applicationLinks: [application('Identificación de componentes', 'marcado-laser'), application('Uniones de precisión', 'soldadura-laser'), application('Ablación de recubrimientos', 'corte-microprocesos')],
+    introduction: 'La manufactura en la industria aeronáutica se apega a los más estrictos controles de calidad. Las tolerancias son muy cerradas. La manufactura se caracteriza por trabajar con pequeños lotes y alta mezcla. La tecnología láser permite cambios de modelo con agilidad manteniendo la estabilidad de los procesos.',
+    applicationLinks: [application('Identificación de componentes', 'marcado-laser'), application('Uniones de precisión', 'soldadura-laser'), application('Corte y tratamientos superficiales', 'corte-microprocesos')],
     blocks: [
       { id: 'necesidades', title: 'Necesidades y retos', items: [
-        { title: 'Material y desempeño', text: 'Preservar las propiedades del material con alta precisión y estabilidad, frente a requisitos estrictos de desempeño y seguridad.' },
-        { title: 'Control documentable', text: 'Mantener trazabilidad y documentación de procesos sin contacto, con criterios de aceptación y validación definidos para el proyecto.' },
+        { title: 'Material y desempeño', text: 'Preservar propiedades del material con alta estabilidad ante altos estándares.' },
+        { title: 'Control documentable', text: 'Mantener trazabilidad y documentación de procesos sin contacto.' },
       ] },
       { id: 'aplicaciones', title: 'Aplicaciones y procesos láser', items: [
-        process('Identificación permanente', 'marcado-laser', 'Marcado e identificación de componentes para mantener su trazabilidad.'),
-        process('Uniones de precisión', 'soldadura-laser', 'Soldadura y uniones de precisión con control térmico del proceso.'),
-        process('Corte y superficies funcionales', 'corte-microprocesos', 'Corte y microprocesos, ablación de recubrimientos y texturizado superficial funcional.'),
+        process('Identificación permanente', 'marcado-laser', 'Marcado y trazabilidad de componentes industriales de alto valor.'),
+        process('Corte y tratamientos superficiales', 'corte-microprocesos', 'Corte, microestructuras superficiales, limpieza de recubrimientos y fluidos y templado.'),
+        process('Uniones de precisión', 'soldadura-laser', 'Soldadura de metales e impresión 3D.'),
       ] },
       { id: 'tecnologias', title: 'Ventajas a evaluar', items: [
         { title: 'Precisión y control térmico', text: 'Alta precisión dimensional y control térmico para reducir reprocesos, variabilidad y scrap.' },

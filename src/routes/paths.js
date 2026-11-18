@@ -21,7 +21,7 @@ export const paths = {
 
 export const navigation = [
   { label: 'Inicio', to: paths.home },
-  { label: 'Soluciones Láser', to: paths.industries },
+  { label: 'Soluciones y Aplicaciones', to: paths.industries },
   { label: 'Universo Láser', to: paths.blog },
   { label: 'Contáctanos', to: paths.contact },
 ];
