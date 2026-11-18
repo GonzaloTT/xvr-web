@@ -2,7 +2,7 @@
 // No publicar teléfonos, correos, direcciones ni horarios sin confirmación.
 export const contactData = {
   heroImage: '/images/hero/contact/911-XVR.webp',
-  introduction: 'Para un proyecto nuevo, describe la pieza, el material y el objetivo. Para una consulta de soporte, explica qué equipo utilizas y qué situación observas. Este formulario es una demostración: no envía solicitudes reales ni guarda datos.',
+  introduction: 'Canal demostrativo (911 XVR) para capturar el contexto de la aplicación, la región (México, EE. UU., Costa Rica), los datos de contacto y la descripción de la incidencia o proyecto. Este formulario es una demostración: no envía solicitudes reales ni guarda datos.',
   direct: {
     title: 'Atención técnica y comercial',
     description: 'Una consulta útil empieza con el contexto: qué buscas fabricar, qué proceso utilizas o qué dificultad necesitas revisar.',
