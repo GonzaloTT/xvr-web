@@ -2,12 +2,12 @@ import { photoImage } from '../../utils/photoImage';
 import { Link } from 'react-router-dom';
 import HeroCarousel from '../../components/HeroCarousel/HeroCarousel';
 import IndustryCard from '../../components/IndustryCard/IndustryCard';
-import PartnerLogo from '../../components/PartnerLogo/PartnerLogo';
 import CTASection from '../../components/CTASection/CTASection';
 import Icon from '../../components/Icon';
 import { heroSlides, aboutImage, homeIndustryImages, partners, accompaniment, companyHighlights } from '../../data/homeData';
 import { industries } from '../../data/industriesData';
 import { paths } from '../../routes/paths';
+import './Home.css';
 export default function Home() {
   return <main id="contenido" className="home-page">
     <HeroCarousel images={heroSlides} className="home-hero photo-hero" ariaLabel="Cómo puede ayudarte XVR">
@@ -19,8 +19,10 @@ export default function Home() {
     <section className="section partners-section"><div className="container">
       <span className="eyebrow">ECOSISTEMA TECNOLÓGICO</span><h2>Socios tecnológicos</h2>
       <p className="section-intro">Marcas de referencia para explorar opciones tecnológicas según cada aplicación: Coherent, Bystronic ROFIN, Precitec, Laserline, Luxinar, BOFA, laservision, Macken y PUREX.</p>
-      <div className="partners-grid">{partners.map(partner => <PartnerLogo key={partner.name} {...partner}/>)}</div>
-      <p className="partners-note">Listado provisional: relaciones comerciales y logotipos pendientes de confirmación.</p>
+      <div className="partners-grid">{partners.map(partner => <div className="partner-logo home-partner-card" key={partner.slug}>
+        <span className="home-partner-name">{partner.name}</span>
+        <div className="home-partner-placeholder" aria-hidden="true"><span /></div>
+      </div>)}</div>
       <Link className="text-link" to={paths.brands}>Conocer nuestras marcas <span aria-hidden="true">→</span></Link>
     </div></section>
     <section id="industrias" className="section industries-section"><div className="container">

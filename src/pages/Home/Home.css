@@ -1,0 +1,58 @@
+/* Home-only layout; brand pages keep their existing presentation. */
+.home-page .partners-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--grid-gap);
+}
+.home-page .home-partner-card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  height: auto;
+  min-height: 160px;
+  padding: 20px;
+}
+.home-partner-name {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 24px;
+  font-size: 16px;
+  line-height: 1.4;
+  text-align: center;
+}
+.home-partner-placeholder {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  min-height: 72px;
+  background: var(--surface-blue);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+}
+.home-partner-placeholder > span {
+  width: 48%;
+  height: 12px;
+  border-radius: var(--radius-sm);
+  background: var(--border);
+}
+.home-page .home-industries-grid {
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+}
+.home-industries-grid > * { grid-column: span 2; }
+.home-industries-grid > :nth-child(4) { grid-column: 2 / span 2; }
+.home-industries-grid > :nth-child(5) { grid-column: 4 / span 2; }
+@media (max-width: 1100px) {
+  .home-page .partners-grid,
+  .home-page .home-industries-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .home-page .home-industries-grid > * { grid-column: auto; }
+}
+@media (max-width: 700px) {
+  .home-page .home-industries-grid { grid-template-columns: 1fr; }
+  .home-page .home-partner-card { min-height: 144px; padding: 16px; gap: 12px; }
+  .home-partner-name { font-size: 14px; }
+  .home-partner-placeholder { min-height: 64px; }
+}
+@media (max-width: 359px) {
+  .home-page .partners-grid { grid-template-columns: 1fr; }
+}
